@@ -1,34 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import pokemon from "./pokemon.json";
+import typechart from "./typechart.json";
+import "./App.css";
+import { SetStateAction, useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [id, setId] = useState<number[]>([]);
+
+  const update = (e: string) => {
+    setId([]);
+    if (e.length > 2) {
+      let tempid = [] as number[];
+      pokemon.map((item, key) => {
+        if (item.name.includes(e)) {
+          tempid.push(key);
+        }
+      });
+      setId(tempid);
+    }
+  };
+
+  const test = (iditem: number) => {
+    let tempweak = [] as string[];
+    typechart.map((typeitem) => {
+      if (pokemon[iditem].type[0] === typeitem.type) {
+        tempweak = tempweak.concat(typeitem.weak);
+      }
+    });
+    console.log(tempweak);
+    return <>{tempweak}</>;
+  };
+
+  const btnc = () => {
+    console.log();
+  };
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <>
+      <div className="body">
+        <textarea
+          maxLength={18}
+          placeholder="Search"
+          className="text"
+          onChange={(e) => {
+            update(e.target.value);
+          }}
+        ></textarea>
+        <button onClick={() => btnc()}>test</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+      {id.map((item, key) => (
+        <>
+          <hr />
+          <div className="card formblock mx-auto">
+            <div className="card-body">
+              {pokemon[item].name}
+              {test(item)}
+            </div>
+          </div>
+        </>
+      ))}
+    </>
+  );
 }
 
-export default App
+export default App;

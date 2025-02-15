@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbasaur",
+    "type": ["Grass", "Poison"],
+    "ability": ["Overgrow", "Chlorophyll"]
+  },
+  {
+    "id": 2,
+    "name": "Ivysaur",
+    "type": ["Grass", "Poison"],
+    "ability": ["Overgrow", "Chlorophyll"]
+  },
+  {
+    "id": 3,
+    "name": "Venusaur",
+    "type": ["Grass", "Poison"],
+    "ability": ["Overgrow", "Chlorophyll"]
+  },
+  {
+    "id": 4,
+    "name": "Charmander",
+    "type": ["Fire"],
+    "ability": ["Blaze", "Solar Power"]
+  },
+  {
+    "id": 5,
+    "name": "Charmeleon",
+    "type": ["Fire"],
+    "ability": ["Blaze", "Solar Power"]
+  },
+  {
+    "id": 6,
+    "name": "Charizard",
+    "type": ["Fire", "Flying"],
+    "ability": ["Blaze", "Solar Power"]
+  }
+]
