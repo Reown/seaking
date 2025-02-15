@@ -1,5 +1,5 @@
-import pokemon from "./pokemon.json";
-import typechart from "./typechart.json";
+import pokemon from "../pokemon.json";
+import typechart from "../typechart.json";
 import "./App.css";
 import { SetStateAction, useState } from "react";
 
