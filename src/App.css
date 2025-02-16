@@ -4,8 +4,8 @@ body {
 }
 
 hr {
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   color: transparent;
 }
 
@@ -14,7 +14,7 @@ textarea {
   min-height: 100px;
   max-height: 100px;
   font-size: 60px;
-  width: 1000px;
+  width: 1200px;
   overflow: hidden;
   resize: none;
   background-color: #181818;
@@ -22,18 +22,53 @@ textarea {
   color: #f8f8f8;
   outline: none;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #f8f8f8;
 }
 
-.body {
+.search {
   margin: auto;
-  text-align: center;
   margin-top: 150px;
+  text-align: center;
+  color: #f8f8f8;
 }
 
 .card {
   background-color: #202020;
   border-color: #404040;
   color: #f8f8f8;
-  width: 700px;
+  width: 900px;
+  text-align: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 40px;
+}
+
+.sub {
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+  color: black;
+  min-width: 150px;
+}
+
+.ability {
+  background-color: white;
+}
+
+.weak {
+  background-color: green;
+  font-size: 24px;
+}
+
+.strong {
+  background-color: purple;
+  font-size: 16px;
 }

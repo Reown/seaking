@@ -2,8 +2,8 @@ import { useState } from "react";
 import pokedex from "../pokedex.json";
 import typechart from "../typechart.json";
 import "./App.css";
+import "./Type.css";
 
-//pokedex json type safety
 interface pokedexType {
   id: number;
   name: string;
@@ -30,12 +30,13 @@ function App() {
     }
   };
 
-  //deep copy from json to obtain only weak/strong multi
   const getMulti = (type: string[]) => {
+    //deep copy from json
     let multi: multiType = JSON.parse(
       JSON.stringify(typechart.find((def) => def.type === "default")?.multi)
     );
 
+    //multiply multi for dual types
     type.forEach((type) => {
       const temp: multiType = JSON.parse(
         JSON.stringify(typechart.find((item) => item.type === type)?.multi)
@@ -45,23 +46,69 @@ function App() {
       });
     });
 
+    //split multi to weak/strong
+    const weak: multiType = {};
+    const strong: multiType = {};
     Object.keys(multi).forEach((key) => {
-      if (multi[key] === 1.0) {
-        delete multi[key];
+      if (multi[key] > 1.0) {
+        weak[key] = multi[key];
+      } else if (multi[key] < 1.0) {
+        strong[key] = multi[key];
       }
     });
-    return multi;
+
+    return { weak, strong };
   };
 
   const render = (found: pokedexType) => {
-    const i = getMulti(found.type);
-    console.log(i);
-    return <></>;
+    const { weak, strong } = getMulti(found.type);
+    return (
+      <>
+        <div className="row g-1">
+          <div className="col weak">
+            <div>test1</div>
+          </div>
+          <div className="col weak">
+            <div>
+              test2
+              <br />
+              test4
+            </div>
+          </div>
+          <div className="col weak">
+            <div>
+              test2
+              <br />
+              test3
+            </div>
+          </div>
+        </div>
+        <div className="row g-1">
+          <div className="col strong">
+            <div>test1</div>
+          </div>
+          <div className="col strong">
+            <div>
+              test2
+              <br />
+              test4
+            </div>
+          </div>
+          <div className="col strong">
+            <div>
+              test2
+              <br />
+              test3
+            </div>
+          </div>
+        </div>
+      </>
+    );
   };
 
   return (
     <>
-      <div className="body">
+      <div className="search">
         <textarea
           maxLength={18}
           placeholder="Search"
@@ -75,10 +122,21 @@ function App() {
         <>
           <hr />
           <div className="card mx-auto">
-            <div className="card-body">
-              {found.name}
-              {render(found)}
+            <div className="card-body row">
+              <div className="col">
+                {found.type.map((type) => (
+                  <div className={`${type} sub`}>{type}</div>
+                ))}
+              </div>
+              <div className="col name">{found.name}</div>
+              <div className="col name">{found.name}</div>
+              <div className="col">
+                {found.ability.map((ability) => (
+                  <div className="ability sub">{ability}</div>
+                ))}
+              </div>
             </div>
+            <div className="card-body">{render(found)}</div>
           </div>
         </>
       ))}
