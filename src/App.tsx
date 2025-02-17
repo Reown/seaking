@@ -1,6 +1,7 @@
 import { useState } from "react";
 import pokedex from "../pokedex.json";
 import typechart from "../typechart.json";
+import abilityDescJson from "../ability.json";
 import "./App.css";
 import "./Type.css";
 
@@ -15,8 +16,14 @@ interface multiType {
   [key: string]: number;
 }
 
+interface abilityDescType {
+  [key: string]: string;
+}
+
 function App() {
   const [found, setFound] = useState<pokedexType[]>([]);
+  const [abilityHover, setAbilityHover] = useState<string | null>(null);
+  const abilityDesc = abilityDescJson as abilityDescType;
 
   //search pokedex for names that includes substring
   const getPokemon = (e: string) => {
@@ -75,7 +82,24 @@ function App() {
         <div className="col name">{found.name}</div>
         <div className="col">
           {found.ability.map((ability) => (
-            <div className="ability sub">{ability}</div>
+            <div
+              className="ability sub"
+              onMouseEnter={() => setAbilityHover(ability)}
+              onMouseLeave={() => setAbilityHover(null)}
+            >
+              {ability}
+              {abilityHover === ability && (
+                <div
+                  style={{
+                    position: "absolute",
+                    backgroundColor: "lightgray",
+                    zIndex: 1,
+                  }}
+                >
+                  {abilityDesc[ability]}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </div>
