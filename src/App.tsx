@@ -87,44 +87,51 @@ function App() {
     return (
       <>
         {Object.keys(weak).length > 0 && (
-          <div className="weaklabel">
-            Super Effective
-            <div className="row g-0 weak">
-              {Object.keys(weak).map((key) => (
-                <div className={`${key} col`}>
-                  {key}
-                  <br />
-                  {weak[key]}x
-                </div>
-              ))}
+          <>
+            <div className="weaklabel">
+              Super Effective
+              <div className="row g-0 weak">
+                {Object.keys(weak).map((key) => (
+                  <div className={`${key} col`}>
+                    {key}
+                    <br />
+                    {weak[key]}x
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+            <br />
+          </>
         )}
-        <br />
         {Object.keys(strong).length > 0 && (
-          <div className="stronglabel">
-            Not Very Effective
-            <div className="row g-0 strong">
-              {Object.keys(strong).map((key) => (
-                <div className={`${key} col`}>
-                  {key}
-                  <br />
-                  {strong[key]}x
-                </div>
-              ))}
+          <>
+            <div className="stronglabel">
+              Not Very Effective
+              <div className="row g-0 strong">
+                {Object.keys(strong).map((key) => (
+                  <div className={`${key} col`}>
+                    {key}
+                    <br />
+                    {strong[key]}x
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+            <br />
+          </>
         )}
-        <br />
         {Object.keys(immune).length > 0 && (
-          <div className="immunelabel">
-            Immune
-            <div className="row g-0 strong">
-              {Object.keys(immune).map((key) => (
-                <div className={`${key} col`}>{key}</div>
-              ))}
+          <>
+            <div className="immunelabel">
+              Immune
+              <div className="row g-0 strong">
+                {Object.keys(immune).map((key) => (
+                  <div className={`${key} col`}>{key}</div>
+                ))}
+              </div>
             </div>
-          </div>
+            <br />
+          </>
         )}
       </>
     );
