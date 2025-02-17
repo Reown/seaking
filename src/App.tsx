@@ -19,7 +19,7 @@ function App() {
   const [found, setFound] = useState<pokedexType[]>([]);
 
   //search pokedex for names that includes substring
-  const searchAll = (e: string) => {
+  const getPokemon = (e: string) => {
     setFound([]);
     if (e.length > 2) {
       setFound(
@@ -46,62 +46,86 @@ function App() {
       });
     });
 
-    //split multi to weak/strong
+    //split multi to weak/strong/immune
     const weak: multiType = {};
     const strong: multiType = {};
+    const immune: multiType = {};
     Object.keys(multi).forEach((key) => {
       if (multi[key] > 1.0) {
         weak[key] = multi[key];
-      } else if (multi[key] < 1.0) {
+      } else if (multi[key] > 0.0 && multi[key] < 1.0) {
         strong[key] = multi[key];
+      } else if (multi[key] === 0.0) {
+        immune[key] = multi[key];
       }
     });
 
-    return { weak, strong };
+    return [weak, strong, immune];
   };
 
-  const render = (found: pokedexType) => {
-    const { weak, strong } = getMulti(found.type);
+  const renderPoke = (found: pokedexType) => {
+    return (
+      <div className="row">
+        <div className="col">
+          {found.type.map((type) => (
+            <div className={`${type} sub`}>{type}</div>
+          ))}
+        </div>
+        <div className="col name">{found.name}</div>
+        <div className="col name">{found.name}</div>
+        <div className="col">
+          {found.ability.map((ability) => (
+            <div className="ability sub">{ability}</div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const renderMulti = (found: pokedexType) => {
+    const [weak, strong, immune] = getMulti(found.type);
     return (
       <>
-        <div className="row g-1">
-          <div className="col weak">
-            <div>test1</div>
-          </div>
-          <div className="col weak">
-            <div>
-              test2
-              <br />
-              test4
+        {Object.keys(weak).length > 0 && (
+          <div className="weaklabel">
+            Super Effective
+            <div className="row g-0 weak">
+              {Object.keys(weak).map((key) => (
+                <div className={`${key} col`}>
+                  {key}
+                  <br />
+                  {weak[key]}x
+                </div>
+              ))}
             </div>
           </div>
-          <div className="col weak">
-            <div>
-              test2
-              <br />
-              test3
+        )}
+        <br />
+        {Object.keys(strong).length > 0 && (
+          <div className="stronglabel">
+            Not Very Effective
+            <div className="row g-0 strong">
+              {Object.keys(strong).map((key) => (
+                <div className={`${key} col`}>
+                  {key}
+                  <br />
+                  {strong[key]}x
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-        <div className="row g-1">
-          <div className="col strong">
-            <div>test1</div>
-          </div>
-          <div className="col strong">
-            <div>
-              test2
-              <br />
-              test4
+        )}
+        <br />
+        {Object.keys(immune).length > 0 && (
+          <div className="immunelabel">
+            Immune
+            <div className="row g-0 strong">
+              {Object.keys(immune).map((key) => (
+                <div className={`${key} col`}>{key}</div>
+              ))}
             </div>
           </div>
-          <div className="col strong">
-            <div>
-              test2
-              <br />
-              test3
-            </div>
-          </div>
-        </div>
+        )}
       </>
     );
   };
@@ -114,7 +138,7 @@ function App() {
           placeholder="Search"
           className="text"
           onChange={(e) => {
-            searchAll(e.target.value);
+            getPokemon(e.target.value);
           }}
         ></textarea>
       </div>
@@ -122,21 +146,8 @@ function App() {
         <>
           <hr />
           <div className="card mx-auto">
-            <div className="card-body row">
-              <div className="col">
-                {found.type.map((type) => (
-                  <div className={`${type} sub`}>{type}</div>
-                ))}
-              </div>
-              <div className="col name">{found.name}</div>
-              <div className="col name">{found.name}</div>
-              <div className="col">
-                {found.ability.map((ability) => (
-                  <div className="ability sub">{ability}</div>
-                ))}
-              </div>
-            </div>
-            <div className="card-body">{render(found)}</div>
+            <div className="card-body">{renderPoke(found)}</div>
+            <div className="card-body">{renderMulti(found)}</div>
           </div>
         </>
       ))}
