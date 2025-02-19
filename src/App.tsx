@@ -22,7 +22,8 @@ interface abilityDescType {
 
 function App() {
   const [found, setFound] = useState<pokedexType[]>([]);
-  const [abilityHover, setAbilityHover] = useState<string | null>(null);
+  const [hoverAbility, setHoverAbility] = useState<string | null>(null);
+  const [hoverPokemon, setHoverPokemon] = useState<string | null>(null);
   const abilityDesc = abilityDescJson as abilityDescType;
 
   //search pokedex for names that includes substring
@@ -84,20 +85,18 @@ function App() {
           {found.ability.map((ability) => (
             <div
               className="ability sub"
-              onMouseEnter={() => setAbilityHover(ability)}
-              onMouseLeave={() => setAbilityHover(null)}
+              onMouseEnter={() => {
+                setHoverAbility(ability);
+                setHoverPokemon(found.name);
+              }}
+              onMouseLeave={() => {
+                setHoverAbility(null);
+                setHoverPokemon(null);
+              }}
             >
               {ability}
-              {abilityHover === ability && (
-                <div
-                  style={{
-                    position: "absolute",
-                    backgroundColor: "lightgray",
-                    zIndex: 1,
-                  }}
-                >
-                  {abilityDesc[ability]}
-                </div>
+              {hoverAbility === ability && hoverPokemon === found.name && (
+                <div className="hover">{abilityDesc[ability]}</div>
               )}
             </div>
           ))}

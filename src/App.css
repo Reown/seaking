@@ -90,3 +90,9 @@ textarea {
   border: 1px solid #bc7737;
   font-size: 20px;
 }
+
+.hover {
+  position: absolute;
+  background-color: aqua;
+  padding: 5px;
+}
