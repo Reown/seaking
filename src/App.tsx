@@ -1,7 +1,7 @@
 import { useState } from "react";
-import pokedex from "../pokedex.json";
-import typechart from "../typechart.json";
-import abilityDescJson from "../ability.json";
+import pokedex from "./data/pokedex.json";
+import typechart from "./data/typechart.json";
+import abilityDescJson from "./data/ability.json";
 import "./App.css";
 import "./Type.css";
 
