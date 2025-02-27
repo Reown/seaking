@@ -1,5 +1,6 @@
 import { useState } from "react";
 import pokedex from "./data/pokedex.json";
+import pokedexnf from "./data/pokedex_nofairy.json";
 import typechart from "./data/typechart.json";
 import abilityDescJson from "./data/ability.json";
 import "./App.css";
@@ -22,19 +23,30 @@ interface abilityDescType {
 
 function App() {
   const [found, setFound] = useState<pokedexType[]>([]);
+  const [fairy, setFairy] = useState<boolean>(true);
   const [hoverAbility, setHoverAbility] = useState<string | null>(null);
   const [hoverPokemon, setHoverPokemon] = useState<string | null>(null);
   const abilityDesc = abilityDescJson as abilityDescType;
 
-  //search pokedex for names that includes substring
   const getPokemon = (e: string) => {
     setFound([]);
+
+    //search pokedex for names that includes substring
     if (e.length > 2) {
-      setFound(
-        pokedex.filter((item) =>
-          item.name.toLowerCase().includes(e.toLowerCase())
-        )
+      const checkf = pokedex.filter((item) =>
+        item.name.toLowerCase().includes(e.toLowerCase())
       );
+
+      //check if fairy is toggled, replace from pokedex_nofairy
+      if (!fairy) {
+        const checknf = checkf.map((item) => {
+          const match = pokedexnf.find((item2) => item?.id === item2.id);
+          return match ? match : item;
+        });
+        setFound(checknf);
+      } else {
+        setFound(checkf);
+      }
     }
   };
 
@@ -186,3 +198,8 @@ function App() {
 }
 
 export default App;
+
+//Sprite
+//extra search button
+//toggle fairy type  gen1-5
+//function somewhere to check if fairy > if > get from 2nd json
