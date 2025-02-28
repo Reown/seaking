@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import pokedex from "./data/pokedex.json";
 import pokedexnf from "./data/pokedex_nofairy.json";
 import typechart from "./data/typechart.json";
@@ -22,13 +22,19 @@ interface abilityDescType {
 }
 
 function App() {
+  const [query, setQuery] = useState<string>("");
   const [found, setFound] = useState<pokedexType[]>([]);
-  const [fairy, setFairy] = useState<boolean>(true);
+  const [fairy, setFairy] = useState<boolean>(false);
   const [hoverAbility, setHoverAbility] = useState<string | null>(null);
   const [hoverPokemon, setHoverPokemon] = useState<string | null>(null);
   const abilityDesc = abilityDescJson as abilityDescType;
 
+  useEffect(() => {
+    getPokemon(query);
+  }, [fairy]);
+
   const getPokemon = (e: string) => {
+    setQuery(e);
     setFound([]);
 
     //search pokedex for names that includes substring
@@ -40,7 +46,7 @@ function App() {
       //check if fairy is toggled, replace from pokedex_nofairy
       if (!fairy) {
         const checknf = checkf.map((item) => {
-          const match = pokedexnf.find((item2) => item?.id === item2.id);
+          const match = pokedexnf.find((item2) => item.id === item2.id);
           return match ? match : item;
         });
         setFound(checknf);
@@ -174,6 +180,27 @@ function App() {
 
   return (
     <>
+      <nav className="navbar">
+        <div className="container-fluid">
+          <a className="navbrand" href="https://github.com/Reown/seaking">
+            Seaking
+          </a>
+          <ul className="nav">
+            <li className="navitem">Gen 1-5 Fairy</li>
+            <li>
+              <div className="form-switch navitem">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                  onChange={(e) => setFairy(!fairy)}
+                ></input>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <div className="search">
         <textarea
           maxLength={18}
@@ -198,8 +225,3 @@ function App() {
 }
 
 export default App;
-
-//Sprite
-//extra search button
-//toggle fairy type  gen1-5
-//function somewhere to check if fairy > if > get from 2nd json

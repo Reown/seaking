@@ -25,6 +25,33 @@ textarea {
   border-bottom: 1px solid #f8f8f8;
 }
 
+.container-fluid {
+  max-width: 70vw;
+  vertical-align: middle;
+}
+
+.navbar {
+  background: #404040;
+  height: 75px;
+}
+
+.navbrand {
+  color: #f8f8f8;
+  font-size: 35px;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+.navitem {
+  color: #f8f8f8;
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+.form-switch {
+  text-align: center;
+}
+
 .search {
   margin: auto;
   margin-top: 150px;
