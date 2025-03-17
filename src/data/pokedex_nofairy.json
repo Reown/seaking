@@ -28,5 +28,53 @@
     "name": "Mr. Mime",
     "type": ["Psychic"],
     "ability": ["Soundproof", "Filter", "Technician"]
+  },
+  {
+    "id": 173,
+    "name": "Cleffa",
+    "type": ["Normal"],
+    "ability": ["Cute Charm", "Magic Guard", "Friend Guard"]
+  },
+  {
+    "id": 174,
+    "name": "Igglybuff",
+    "type": ["Normal"],
+    "ability": ["Cute Charm", "Competitive", "Friend Guard"]
+  },
+  {
+    "id": 175,
+    "name": "Togepi",
+    "type": ["Normal"],
+    "ability": ["Hustle", "Serene Grace", "Super Luck"]
+  },
+  {
+    "id": 176,
+    "name": "Togetic",
+    "type": ["Normal", "Flying"],
+    "ability": ["Hustle", "Serene Grace", "Super Luck"]
+  },
+  {
+    "id": 183,
+    "name": "Marill",
+    "type": ["Water"],
+    "ability": ["Thick Fat", "Huge Power", "Sap Sipper"]
+  },
+  {
+    "id": 184,
+    "name": "Azumarill",
+    "type": ["Water"],
+    "ability": ["Thick Fat", "Huge Power", "Sap Sipper"]
+  },
+  {
+    "id": 209,
+    "name": "Snubbull",
+    "type": ["Normal"],
+    "ability": ["Intimidate", "Run Away", "Rattled"]
+  },
+  {
+    "id": 210,
+    "name": "Granbull",
+    "type": ["Normal"],
+    "ability": ["Intimidate", "Quick Feet", "Rattled"]
   }
 ]

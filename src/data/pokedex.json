@@ -169,7 +169,7 @@
   },
   {
     "id": 29,
-    "name": "Nidoran M",
+    "name": "Nidoran♀",
     "type": ["Poison"],
     "ability": ["Poison Point", "Rivalry", "Hustle"]
   },
@@ -187,7 +187,7 @@
   },
   {
     "id": 32,
-    "name": "Nidoran F",
+    "name": "Nidoran♂",
     "type": ["Poison"],
     "ability": ["Poison Point", "Rivalry", "Hustle"]
   },
@@ -269,7 +269,6 @@
     "type": ["Grass", "Poison"],
     "ability": ["Chlorophyll", "Effect Spore"]
   },
-
   {
     "id": 46,
     "name": "Paras",
@@ -294,7 +293,6 @@
     "type": ["Bug", "Poison"],
     "ability": ["Shield Dust", "Tinted Lens", "Wonder Skin"]
   },
-
   {
     "id": 50,
     "name": "Diglett",
@@ -906,5 +904,605 @@
     "name": "Mew",
     "type": ["Psychic"],
     "ability": ["Synchronize"]
+  },
+  {
+    "id": 152,
+    "name": "Chikorita",
+    "type": ["Grass"],
+    "ability": ["Overgrow", "Leaf Guard"]
+  },
+  {
+    "id": 153,
+    "name": "Bayleef",
+    "type": ["Grass"],
+    "ability": ["Overgrow", "Leaf Guard"]
+  },
+  {
+    "id": 154,
+    "name": "Meganium",
+    "type": ["Grass"],
+    "ability": ["Overgrow", "Leaf Guard"]
+  },
+  {
+    "id": 155,
+    "name": "Cyndaquil",
+    "type": ["Fire"],
+    "ability": ["Blaze", "Flash Fire"]
+  },
+  {
+    "id": 156,
+    "name": "Quilava",
+    "type": ["Fire"],
+    "ability": ["Blaze", "Flash Fire"]
+  },
+  {
+    "id": 157,
+    "name": "Typhlosion",
+    "type": ["Fire"],
+    "ability": ["Blaze", "Flash Fire"]
+  },
+  {
+    "id": 158,
+    "name": "Totodile",
+    "type": ["Water"],
+    "ability": ["Torrent", "Sheer Force"]
+  },
+  {
+    "id": 159,
+    "name": "Croconaw",
+    "type": ["Water"],
+    "ability": ["Torrent", "Sheer Force"]
+  },
+  {
+    "id": 160,
+    "name": "Feraligatr",
+    "type": ["Water"],
+    "ability": ["Torrent", "Sheer Force"]
+  },
+  {
+    "id": 161,
+    "name": "Sentret",
+    "type": ["Normal"],
+    "ability": ["Run Away", "Keen Eye", "Frisk"]
+  },
+  {
+    "id": 162,
+    "name": "Furret",
+    "type": ["Normal"],
+    "ability": ["Run Away", "Keen Eye", "Frisk"]
+  },
+  {
+    "id": 163,
+    "name": "Hoothoot",
+    "type": ["Normal", "Flying"],
+    "ability": ["Insomnia", "Keen Eye", "Tinted Lens"]
+  },
+  {
+    "id": 164,
+    "name": "Noctowl",
+    "type": ["Normal", "Flying"],
+    "ability": ["Insomnia", "Keen Eye", "Tinted Lens"]
+  },
+  {
+    "id": 165,
+    "name": "Ledyba",
+    "type": ["Bug", "Flying"],
+    "ability": ["Swarm", "Early Bird", "Rattled"]
+  },
+  {
+    "id": 166,
+    "name": "Ledian",
+    "type": ["Bug", "Flying"],
+    "ability": ["Swarm", "Early Bird", "Iron Fist"]
+  },
+  {
+    "id": 167,
+    "name": "Spinarak",
+    "type": ["Bug", "Poison"],
+    "ability": ["Swarm", "Insomnia", "Sniper"]
+  },
+  {
+    "id": 168,
+    "name": "Ariados",
+    "type": ["Bug", "Poison"],
+    "ability": ["Swarm", "Insomnia", "Sniper"]
+  },
+  {
+    "id": 169,
+    "name": "Crobat",
+    "type": ["Poison", "Flying"],
+    "ability": ["Inner Focus", "Infiltrator"]
+  },
+  {
+    "id": 170,
+    "name": "Chinchou",
+    "type": ["Water", "Electric"],
+    "ability": ["Volt Absorb", "Illuminate", "Water Absorb"]
+  },
+  {
+    "id": 171,
+    "name": "Lanturn",
+    "type": ["Water", "Electric"],
+    "ability": ["Volt Absorb", "Illuminate", "Water Absorb"]
+  },
+  {
+    "id": 172,
+    "name": "Pichu",
+    "type": ["Electric"],
+    "ability": ["Static", "Lightning Rod"]
+  },
+  {
+    "id": 173,
+    "name": "Cleffa",
+    "type": ["Fairy"],
+    "ability": ["Cute Charm", "Magic Guard", "Friend Guard"]
+  },
+  {
+    "id": 174,
+    "name": "Igglybuff",
+    "type": ["Normal", "Fairy"],
+    "ability": ["Cute Charm", "Competitive", "Friend Guard"]
+  },
+  {
+    "id": 175,
+    "name": "Togepi",
+    "type": ["Fairy"],
+    "ability": ["Hustle", "Serene Grace", "Super Luck"]
+  },
+  {
+    "id": 176,
+    "name": "Togetic",
+    "type": ["Fairy", "Flying"],
+    "ability": ["Hustle", "Serene Grace", "Super Luck"]
+  },
+  {
+    "id": 177,
+    "name": "Natu",
+    "type": ["Psychic", "Flying"],
+    "ability": ["Synchronize", "Early Bird", "Magic Bounce"]
+  },
+  {
+    "id": 178,
+    "name": "Xatu",
+    "type": ["Psychic", "Flying"],
+    "ability": ["Synchronize", "Early Bird", "Magic Bounce"]
+  },
+  {
+    "id": 179,
+    "name": "Mareep",
+    "type": ["Electric"],
+    "ability": ["Static", "Plus"]
+  },
+  {
+    "id": 180,
+    "name": "Flaaffy",
+    "type": ["Electric"],
+    "ability": ["Static", "Plus"]
+  },
+  {
+    "id": 181,
+    "name": "Ampharos",
+    "type": ["Electric"],
+    "ability": ["Static", "Plus"]
+  },
+  {
+    "id": 182,
+    "name": "Bellossom",
+    "type": ["Grass"],
+    "ability": ["Chlorophyll", "Healer"]
+  },
+  {
+    "id": 183,
+    "name": "Marill",
+    "type": ["Water", "Fairy"],
+    "ability": ["Thick Fat", "Huge Power", "Sap Sipper"]
+  },
+  {
+    "id": 184,
+    "name": "Azumarill",
+    "type": ["Water", "Fairy"],
+    "ability": ["Thick Fat", "Huge Power", "Sap Sipper"]
+  },
+  {
+    "id": 185,
+    "name": "Sudowoodo",
+    "type": ["Rock"],
+    "ability": ["Sturdy", "Rock Head", "Rattled"]
+  },
+  {
+    "id": 186,
+    "name": "Politoed",
+    "type": ["Water"],
+    "ability": ["Water Absorb", "Damp", "Drizzle"]
+  },
+  {
+    "id": 187,
+    "name": "Hoppip",
+    "type": ["Grass", "Flying"],
+    "ability": ["Chlorophyll", "Leaf Guard", "Infiltrator"]
+  },
+  {
+    "id": 188,
+    "name": "Skiploom",
+    "type": ["Grass", "Flying"],
+    "ability": ["Chlorophyll", "Leaf Guard", "Infiltrator"]
+  },
+  {
+    "id": 189,
+    "name": "Jumpluff",
+    "type": ["Grass", "Flying"],
+    "ability": ["Chlorophyll", "Leaf Guard", "Infiltrator"]
+  },
+  {
+    "id": 190,
+    "name": "Aipom",
+    "type": ["Normal"],
+    "ability": ["Run Away", "Pickup", "Skill Link"]
+  },
+  {
+    "id": 191,
+    "name": "Sunkern",
+    "type": ["Grass"],
+    "ability": ["Chlorophyll", "Solar Power", "Early Bird"]
+  },
+  {
+    "id": 192,
+    "name": "Sunflora",
+    "type": ["Grass"],
+    "ability": ["Chlorophyll", "Solar Power", "Early Bird"]
+  },
+  {
+    "id": 193,
+    "name": "Yanma",
+    "type": ["Bug", "Flying"],
+    "ability": ["Speed Boost", "Compound Eyes", "Frisk"]
+  },
+  {
+    "id": 194,
+    "name": "Wooper",
+    "type": ["Water", "Ground"],
+    "ability": ["Damp", "Water Absorb", "Unaware"]
+  },
+  {
+    "id": 195,
+    "name": "Quagsire",
+    "type": ["Water", "Ground"],
+    "ability": ["Damp", "Water Absorb", "Unaware"]
+  },
+  {
+    "id": 196,
+    "name": "Espeon",
+    "type": ["Psychic"],
+    "ability": ["Synchronize", "Magic Bounce"]
+  },
+  {
+    "id": 197,
+    "name": "Umbreon",
+    "type": ["Dark"],
+    "ability": ["Synchronize", "Inner Focus"]
+  },
+  {
+    "id": 198,
+    "name": "Murkrow",
+    "type": ["Dark", "Flying"],
+    "ability": ["Insomnia", "Super Luck", "Prankster"]
+  },
+  {
+    "id": 199,
+    "name": "Slowking",
+    "type": ["Water", "Psychic"],
+    "ability": ["Oblivious", "Own Tempo", "Regenerator"]
+  },
+  {
+    "id": 200,
+    "name": "Misdreavus",
+    "type": ["Ghost"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 201,
+    "name": "Unown",
+    "type": ["Psychic"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 202,
+    "name": "Wobbuffet",
+    "type": ["Psychic"],
+    "ability": ["Shadow Tag", "Telepathy"]
+  },
+  {
+    "id": 203,
+    "name": "Girafarig",
+    "type": ["Normal", "Psychic"],
+    "ability": ["Inner Focus", "Early Bird", "Sap Sipper"]
+  },
+  {
+    "id": 204,
+    "name": "Pineco",
+    "type": ["Bug"],
+    "ability": ["Sturdy", "Overcoat"]
+  },
+  {
+    "id": 205,
+    "name": "Forretress",
+    "type": ["Bug", "Steel"],
+    "ability": ["Sturdy", "Overcoat"]
+  },
+  {
+    "id": 206,
+    "name": "Dunsparce",
+    "type": ["Normal"],
+    "ability": ["Serene Grace", "Run Away", "Rattled"]
+  },
+  {
+    "id": 207,
+    "name": "Gligar",
+    "type": ["Ground", "Flying"],
+    "ability": ["Hyper Cutter", "Sand Veil", "Immunity"]
+  },
+  {
+    "id": 208,
+    "name": "Steelix",
+    "type": ["Steel", "Ground"],
+    "ability": ["Rock Head", "Sturdy", "Sheer Force"]
+  },
+  {
+    "id": 209,
+    "name": "Snubbull",
+    "type": ["Fairy"],
+    "ability": ["Intimidate", "Run Away", "Rattled"]
+  },
+  {
+    "id": 210,
+    "name": "Granbull",
+    "type": ["Fairy"],
+    "ability": ["Intimidate", "Quick Feet", "Rattled"]
+  },
+  {
+    "id": 211,
+    "name": "Qwilfish",
+    "type": ["Water", "Poison"],
+    "ability": ["Poison Point", "Swift Swim", "Intimidate"]
+  },
+  {
+    "id": 212,
+    "name": "Scizor",
+    "type": ["Bug", "Steel"],
+    "ability": ["Swarm", "Technician", "Light Metal"]
+  },
+  {
+    "id": 213,
+    "name": "Shuckle",
+    "type": ["Bug", "Rock"],
+    "ability": ["Sturdy", "Gluttony", "Contrary"]
+  },
+  {
+    "id": 214,
+    "name": "Heracross",
+    "type": ["Bug", "Fighting"],
+    "ability": ["Swarm", "Guts", "Moxie"]
+  },
+  {
+    "id": 215,
+    "name": "Sneasel",
+    "type": ["Dark", "Ice"],
+    "ability": ["Inner Focus", "Keen Eye", "Pickpocket"]
+  },
+  {
+    "id": 216,
+    "name": "Teddiursa",
+    "type": ["Normal"],
+    "ability": ["Pickup", "Quick Feet", "Honey Gather"]
+  },
+  {
+    "id": 217,
+    "name": "Ursaring",
+    "type": ["Normal"],
+    "ability": ["Guts", "Quick Feet", "Unnerve"]
+  },
+  {
+    "id": 218,
+    "name": "Slugma",
+    "type": ["Fire"],
+    "ability": ["Magma Armor", "Flame Body", "Weak Armor"]
+  },
+  {
+    "id": 219,
+    "name": "Magcargo",
+    "type": ["Fire", "Rock"],
+    "ability": ["Magma Armor", "Flame Body", "Weak Armor"]
+  },
+  {
+    "id": 220,
+    "name": "Swinub",
+    "type": ["Ice", "Ground"],
+    "ability": ["Oblivious", "Snow Cloak", "Thick Fat"]
+  },
+  {
+    "id": 221,
+    "name": "Piloswine",
+    "type": ["Ice", "Ground"],
+    "ability": ["Oblivious", "Snow Cloak", "Thick Fat"]
+  },
+  {
+    "id": 222,
+    "name": "Corsola",
+    "type": ["Water", "Rock"],
+    "ability": ["Hustle", "Natural Cure", "Regenerator"]
+  },
+  {
+    "id": 223,
+    "name": "Remoraid",
+    "type": ["Water"],
+    "ability": ["Hustle", "Sniper", "Moody"]
+  },
+  {
+    "id": 224,
+    "name": "Octillery",
+    "type": ["Water"],
+    "ability": ["Suction Cups", "Sniper", "Moody"]
+  },
+  {
+    "id": 225,
+    "name": "Delibird",
+    "type": ["Ice", "Flying"],
+    "ability": ["Vital Spirit", "Hustle", "Insomnia"]
+  },
+  {
+    "id": 226,
+    "name": "Mantine",
+    "type": ["Water", "Flying"],
+    "ability": ["Swift Swim", "Water Absorb", "Water Veil"]
+  },
+  {
+    "id": 227,
+    "name": "Skarmory",
+    "type": ["Steel", "Flying"],
+    "ability": ["Keen Eye", "Sturdy", "Weak Armor"]
+  },
+  {
+    "id": 228,
+    "name": "Houndour",
+    "type": ["Dark", "Fire"],
+    "ability": ["Early Bird", "Flash Fire", "Unnerve"]
+  },
+  {
+    "id": 229,
+    "name": "Houndoom",
+    "type": ["Dark", "Fire"],
+    "ability": ["Early Bird", "Flash Fire", "Unnerve"]
+  },
+  {
+    "id": 230,
+    "name": "Kingdra",
+    "type": ["Water", "Dragon"],
+    "ability": ["Swift Swim", "Sniper", "Damp"]
+  },
+  {
+    "id": 231,
+    "name": "Phanpy",
+    "type": ["Ground"],
+    "ability": ["Pickup", "Sand Veil"]
+  },
+  {
+    "id": 232,
+    "name": "Donphan",
+    "type": ["Ground"],
+    "ability": ["Sturdy", "Sand Veil"]
+  },
+  {
+    "id": 233,
+    "name": "Porygon2",
+    "type": ["Normal"],
+    "ability": ["Trace", "Download", "Analytic"]
+  },
+  {
+    "id": 234,
+    "name": "Stantler",
+    "type": ["Normal"],
+    "ability": ["Intimidate", "Frisk", "Sap Sipper"]
+  },
+  {
+    "id": 235,
+    "name": "Smeargle",
+    "type": ["Normal"],
+    "ability": ["Own Tempo", "Technician", "Moody"]
+  },
+  {
+    "id": 236,
+    "name": "Tyrogue",
+    "type": ["Fighting"],
+    "ability": ["Guts", "Steadfast", "Vital Spirit"]
+  },
+  {
+    "id": 237,
+    "name": "Hitmontop",
+    "type": ["Fighting"],
+    "ability": ["Intimidate", "Technician", "Steadfast"]
+  },
+  {
+    "id": 238,
+    "name": "Smoochum",
+    "type": ["Ice", "Psychic"],
+    "ability": ["Oblivious", "Forewarn", "Hydration"]
+  },
+  {
+    "id": 239,
+    "name": "Elekid",
+    "type": ["Electric"],
+    "ability": ["Static", "Vital Spirit"]
+  },
+  {
+    "id": 240,
+    "name": "Magby",
+    "type": ["Fire"],
+    "ability": ["Flame Body", "Vital Spirit"]
+  },
+  {
+    "id": 241,
+    "name": "Miltank",
+    "type": ["Normal"],
+    "ability": ["Thick Fat", "Scrappy", "Sap Sipper"]
+  },
+  {
+    "id": 242,
+    "name": "Blissey",
+    "type": ["Normal"],
+    "ability": ["Natural Cure", "Serene Grace", "Healer"]
+  },
+  {
+    "id": 243,
+    "name": "Raikou",
+    "type": ["Electric"],
+    "ability": ["Pressure", "Inner Focus"]
+  },
+  {
+    "id": 244,
+    "name": "Entei",
+    "type": ["Fire"],
+    "ability": ["Pressure", "Inner Focus"]
+  },
+  {
+    "id": 245,
+    "name": "Suicune",
+    "type": ["Water"],
+    "ability": ["Pressure", "Inner Focus"]
+  },
+  {
+    "id": 246,
+    "name": "Larvitar",
+    "type": ["Rock", "Ground"],
+    "ability": ["Guts", "Sand Veil"]
+  },
+  {
+    "id": 247,
+    "name": "Pupitar",
+    "type": ["Rock", "Ground"],
+    "ability": ["Shed Skin"]
+  },
+  {
+    "id": 248,
+    "name": "Tyranitar",
+    "type": ["Rock", "Dark"],
+    "ability": ["Sand Stream", "Unnerve"]
+  },
+  {
+    "id": 249,
+    "name": "Lugia",
+    "type": ["Psychic", "Flying"],
+    "ability": ["Pressure", "Multiscale"]
+  },
+  {
+    "id": 250,
+    "name": "Ho-Oh",
+    "type": ["Fire", "Flying"],
+    "ability": ["Pressure", "Regenerator"]
+  },
+  {
+    "id": 251,
+    "name": "Celebi",
+    "type": ["Psychic", "Grass"],
+    "ability": ["Natural Cure"]
   }
 ]
