@@ -24,7 +24,7 @@ interface abilityDescType {
 function App() {
   const [query, setQuery] = useState<string>("");
   const [found, setFound] = useState<pokedexType[]>([]);
-  const [fairy, setFairy] = useState<boolean>(false);
+  const [fairy, setFairy] = useState<boolean>(true);
   const [hoverAbility, setHoverAbility] = useState<string | null>(null);
   const [hoverPokemon, setHoverPokemon] = useState<string | null>(null);
   const abilityDesc = abilityDescJson as abilityDescType;
@@ -186,14 +186,15 @@ function App() {
             Seaking
           </a>
           <ul className="nav">
-            <li className="navitem">Gen 1-5 Fairy</li>
-            <li>
+            <li className="navitem">
+              Gen 1-5 Fairy
               <div className="form-switch navitem">
                 <input
                   className="form-check-input"
                   type="checkbox"
                   role="switch"
                   id="flexSwitchCheckDefault"
+                  defaultChecked
                   onChange={(e) => setFairy(!fairy)}
                 ></input>
               </div>

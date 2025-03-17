@@ -32,13 +32,13 @@ textarea {
 
 .navbar {
   background: #404040;
-  height: 75px;
+  height: 90px;
 }
 
 .navbrand {
   color: #f8f8f8;
   font-size: 35px;
-  padding-bottom: 5px;
+  padding-bottom: 12px;
   text-decoration: none;
 }
 
