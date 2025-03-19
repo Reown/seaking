@@ -163,8 +163,8 @@ function App() {
     );
   };
 
-  const renderMulti = (found: pokedexType) => {
-    const [weak, strong, immune] = getMulti(found.type);
+  const renderMulti = (type: string[]) => {
+    const [weak, strong, immune] = getMulti(type);
     return (
       <div className="card-body">
         {Object.keys(weak).length > 0 && (
@@ -236,7 +236,7 @@ function App() {
           <hr />
           <div className="card mx-auto">
             {renderPoke(found)}
-            {renderMulti(found)}
+            {renderMulti(found.type)}
           </div>
         </>
       ))}
