@@ -56,6 +56,19 @@ function App() {
     }
   };
 
+  const getDesc = (ability: string) => {
+    //check if is Hidden Ability
+    const isHA = ability.startsWith("HA:");
+    const tempAbility = isHA ? ability.replace("HA: ", "") : ability;
+    const description = abilityDesc[tempAbility]
+      ? isHA
+        ? `Hidden Ability: ${abilityDesc[tempAbility]}`
+        : abilityDesc[tempAbility]
+      : "Ability not found";
+
+    return description;
+  };
+
   const getMulti = (type: string[]) => {
     //deep copy from json
     let multi: multiType = JSON.parse(
@@ -140,7 +153,7 @@ function App() {
               >
                 {ability}
                 {hoverAbility === ability && hoverPokemon === found.name && (
-                  <div className="hover">{abilityDesc[ability]}</div>
+                  <div className="hover">{getDesc(ability)}</div>
                 )}
               </div>
             ))}
@@ -216,7 +229,7 @@ function App() {
           onChange={(e) => {
             getPokemon(e.target.value);
           }}
-        ></textarea>
+        />
       </div>
       {found.map((found) => (
         <>
