@@ -32,20 +32,17 @@ textarea {
 
 .navbar {
   background: #404040;
-  height: 90px;
 }
 
-.navbrand {
+.navbar-brand {
   color: #f8f8f8;
-  font-size: 35px;
-  padding-bottom: 12px;
-  text-decoration: none;
+  font-size: 2rem;
+  margin-bottom: 5px;
 }
 
-.navitem {
+.nav-item {
   color: #f8f8f8;
-  font-size: 25px;
-  padding-bottom: 5px;
+  font-size: 1.2rem;
 }
 
 .form-switch {
@@ -73,10 +70,6 @@ textarea {
   justify-content: center;
 }
 
-.name {
-  font-size: 40px;
-}
-
 .sub {
   font-size: 20px;
   margin-top: 10px;
@@ -84,6 +77,10 @@ textarea {
   border: 1px solid black;
   color: black;
   min-width: 150px;
+}
+
+.name {
+  font-size: 40px;
 }
 
 .ability {

@@ -89,35 +89,62 @@ function App() {
     return [weak, strong, immune];
   };
 
+  const renderNav = () => {
+    return (
+      <nav className="navbar navbar-dark navbar-expand-lg">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="https://github.com/Reown/seaking">
+            Seaking
+          </a>
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              Gen 1-5 Fairy
+              <div className="form-switch">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  defaultChecked
+                  onChange={(e) => setFairy(!fairy)}
+                ></input>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    );
+  };
+
   const renderPoke = (found: pokedexType) => {
     return (
-      <div className="row">
-        <div className="col">
-          {found.type.map((type) => (
-            <div className={`${type} sub`}>{type}</div>
-          ))}
-        </div>
-        <div className="col name">{found.name}</div>
-        <div className="col name">{found.name}</div>
-        <div className="col">
-          {found.ability.map((ability) => (
-            <div
-              className="ability sub"
-              onMouseEnter={() => {
-                setHoverAbility(ability);
-                setHoverPokemon(found.name);
-              }}
-              onMouseLeave={() => {
-                setHoverAbility(null);
-                setHoverPokemon(null);
-              }}
-            >
-              {ability}
-              {hoverAbility === ability && hoverPokemon === found.name && (
-                <div className="hover">{abilityDesc[ability]}</div>
-              )}
-            </div>
-          ))}
+      <div className="card-body">
+        <div className="row">
+          <div className="col">
+            {found.type.map((type) => (
+              <div className={`${type} sub`}>{type}</div>
+            ))}
+          </div>
+          <div className="col name">{found.name}</div>
+          <div className="col name">{found.name}</div>
+          <div className="col">
+            {found.ability.map((ability) => (
+              <div
+                className="ability sub"
+                onMouseEnter={() => {
+                  setHoverAbility(ability);
+                  setHoverPokemon(found.name);
+                }}
+                onMouseLeave={() => {
+                  setHoverAbility(null);
+                  setHoverPokemon(null);
+                }}
+              >
+                {ability}
+                {hoverAbility === ability && hoverPokemon === found.name && (
+                  <div className="hover">{abilityDesc[ability]}</div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -126,7 +153,7 @@ function App() {
   const renderMulti = (found: pokedexType) => {
     const [weak, strong, immune] = getMulti(found.type);
     return (
-      <>
+      <div className="card-body">
         {Object.keys(weak).length > 0 && (
           <>
             <div className="weaklabel">
@@ -174,34 +201,13 @@ function App() {
             <br />
           </>
         )}
-      </>
+      </div>
     );
   };
 
   return (
     <>
-      <nav className="navbar">
-        <div className="container-fluid">
-          <a className="navbrand" href="https://github.com/Reown/seaking">
-            Seaking
-          </a>
-          <ul className="nav">
-            <li className="navitem">
-              Gen 1-5 Fairy
-              <div className="form-switch navitem">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckDefault"
-                  defaultChecked
-                  onChange={(e) => setFairy(!fairy)}
-                ></input>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      {renderNav()}
       <div className="search">
         <textarea
           maxLength={18}
@@ -216,8 +222,8 @@ function App() {
         <>
           <hr />
           <div className="card mx-auto">
-            <div className="card-body">{renderPoke(found)}</div>
-            <div className="card-body">{renderMulti(found)}</div>
+            {renderPoke(found)}
+            {renderMulti(found)}
           </div>
         </>
       ))}
