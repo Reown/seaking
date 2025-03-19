@@ -1,0 +1,110 @@
+[
+  {
+    "id": 19,
+    "name": "Alolan Rattata",
+    "type": ["Dark", "Normal"],
+    "ability": ["Gluttony", "Hustle", "HA: Thick Fat"]
+  },
+  {
+    "id": 20,
+    "name": "Alolan Raticate",
+    "type": ["Dark", "Normal"],
+    "ability": ["Gluttony", "Hustle", "HA: Thick Fat"]
+  },
+  {
+    "id": 26,
+    "name": "Alolan Raichu",
+    "type": ["Electric", "Psychic"],
+    "ability": ["Surge Surfer"]
+  },
+  {
+    "id": 27,
+    "name": "Alolan Sandshrew",
+    "type": ["Ice", "Steel"],
+    "ability": ["Snow Cloak", "HA: Slush Rush"]
+  },
+  {
+    "id": 28,
+    "name": "Alolan Sandslash",
+    "type": ["Ice", "Steel"],
+    "ability": ["Snow Cloak", "HA: Slush Rush"]
+  },
+  {
+    "id": 37,
+    "name": "Alolan Vulpix",
+    "type": ["Ice"],
+    "ability": ["Snow Cloak", "HA: Snow Warning"]
+  },
+  {
+    "id": 38,
+    "name": "Alolan Ninetales",
+    "type": ["Ice", "Fairy"],
+    "ability": ["Snow Cloak", "HA: Snow Warning"]
+  },
+  {
+    "id": 50,
+    "name": "Alolan Diglett",
+    "type": ["Ground", "Steel"],
+    "ability": ["Sand Veil", "Tangling Hair", "HA: Sand Force"]
+  },
+  {
+    "id": 51,
+    "name": "Alolan Dugtrio",
+    "type": ["Ground", "Steel"],
+    "ability": ["Sand Veil", "Tangling Hair", "HA: Sand Force"]
+  },
+  {
+    "id": 52,
+    "name": "Alolan Meowth",
+    "type": ["Dark"],
+    "ability": ["Pickup", "Technician", "HA: Rattled"]
+  },
+  {
+    "id": 53,
+    "name": "Alolan Persian",
+    "type": ["Dark"],
+    "ability": ["Fur Coat", "Technician", "HA: Rattled"]
+  },
+  {
+    "id": 74,
+    "name": "Alolan Geodude",
+    "type": ["Rock", "Electric"],
+    "ability": ["Magnet Pull", "Sturdy", "HA: Galvanize"]
+  },
+  {
+    "id": 75,
+    "name": "Alolan Graveler",
+    "type": ["Rock", "Electric"],
+    "ability": ["Magnet Pull", "Sturdy", "HA: Galvanize"]
+  },
+  {
+    "id": 76,
+    "name": "Alolan Golem",
+    "type": ["Rock", "Electric"],
+    "ability": ["Magnet Pull", "Sturdy", "HA: Galvanize"]
+  },
+  {
+    "id": 88,
+    "name": "Alolan Grimer",
+    "type": ["Poison", "Dark"],
+    "ability": ["Poison Touch", "Gluttony", "HA: Power of Alchemy"]
+  },
+  {
+    "id": 89,
+    "name": "Alolan Muk",
+    "type": ["Poison", "Dark"],
+    "ability": ["Poison Touch", "Gluttony", "HA: Power of Alchemy"]
+  },
+  {
+    "id": 103,
+    "name": "Alolan Exeggutor",
+    "type": ["Grass", "Dragon"],
+    "ability": ["Frisk", "HA: Harvest"]
+  },
+  {
+    "id": 105,
+    "name": "Alolan Marowak",
+    "type": ["Fire", "Ghost"],
+    "ability": ["Cursed Body", "Lightning Rod", "HA: Rock Head"]
+  }
+]
