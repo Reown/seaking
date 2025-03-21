@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import pokedex from "./data/pokedex.json";
 import pokedexnf from "./data/pokedex_nofairy.json";
+import regionaldex from "./data/regionaldex.json";
 import typechart from "./data/typechart.json";
 import abilityDescJson from "./data/ability.json";
 import "./App.css";
@@ -59,7 +60,7 @@ function App() {
   const getDesc = (ability: string) => {
     //check if is Hidden Ability
     const isHA = ability.startsWith("HA:");
-    const tempAbility = isHA ? ability.replace("HA: ", "") : ability;
+    const tempAbility = isHA ? ability.replace(/^HA:\s*/, "") : ability;
     const description = abilityDesc[tempAbility]
       ? isHA
         ? `Hidden Ability: ${abilityDesc[tempAbility]}`
@@ -102,7 +103,7 @@ function App() {
     return [weak, strong, immune];
   };
 
-  const renderNav = () => {
+  const renderNavbar = () => {
     return (
       <nav className="navbar navbar-dark navbar-expand-lg">
         <div className="container-fluid">
@@ -117,8 +118,8 @@ function App() {
                   className="form-check-input"
                   type="checkbox"
                   defaultChecked
-                  onChange={(e) => setFairy(!fairy)}
-                ></input>
+                  onChange={() => setFairy(!fairy)}
+                />
               </div>
             </li>
           </ul>
@@ -218,9 +219,36 @@ function App() {
     );
   };
 
+  const renderNavTab = (name: string, isDefault: boolean) => {
+    return (
+      <li className="nav-item">
+        <button
+          className={`nav-link ${isDefault ? "active" : ""}`}
+          data-bs-toggle="tab"
+          data-bs-target={`#${name.replace(/\s+/g, "-")}`}
+          aria-selected={`${isDefault ? "true" : "false"}`}
+        >
+          {name}
+        </button>
+      </li>
+    );
+  };
+
+  const renderTabContent = (found: pokedexType, isDefault: boolean) => {
+    return (
+      <div
+        className={`tab-pane fade ${isDefault ? "show active" : ""}`}
+        id={`${found.name.replace(/\s+/g, "-")}`}
+      >
+        {renderPoke(found)}
+        {renderMulti(found.type)}
+      </div>
+    );
+  };
+
   return (
     <>
-      {renderNav()}
+      {renderNavbar()}
       <div className="search">
         <textarea
           maxLength={18}
@@ -231,15 +259,35 @@ function App() {
           }}
         />
       </div>
-      {found.map((found) => (
-        <>
-          <hr />
-          <div className="card mx-auto">
-            {renderPoke(found)}
-            {renderMulti(found.type)}
-          </div>
-        </>
-      ))}
+      {found.map((found) => {
+        //check for regional forms with id
+        const rmatch = regionaldex.filter((item) => item.id === found.id);
+        const hasRegional = rmatch.length > 0;
+        return (
+          <>
+            <hr />
+            <div className="card mx-auto">
+              {hasRegional ? (
+                <>
+                  <ul className="nav nav-tabs">
+                    {renderNavTab(found.name, true)}
+                    {rmatch.map((item) => renderNavTab(item.name, false))}
+                  </ul>
+                  <div className="tab-content">
+                    {renderTabContent(found, true)}
+                    {rmatch.map((item) => renderTabContent(item, false))}
+                  </div>
+                </>
+              ) : (
+                <>
+                  {renderPoke(found)}
+                  {renderMulti(found.type)}
+                </>
+              )}
+            </div>
+          </>
+        );
+      })}
     </>
   );
 }
