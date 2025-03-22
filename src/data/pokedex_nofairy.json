@@ -76,5 +76,35 @@
     "name": "Granbull",
     "type": ["Normal"],
     "ability": ["Intimidate", "Quick Feet", "Rattled"]
+  },
+  {
+    "id": 280,
+    "name": "Ralts",
+    "type": ["Psychic"],
+    "ability": ["Synchronize", "Trace", "HA: Telepathy"]
+  },
+  {
+    "id": 281,
+    "name": "Kirlia",
+    "type": ["Psychic"],
+    "ability": ["Synchronize", "Trace", "HA: Telepathy"]
+  },
+  {
+    "id": 282,
+    "name": "Gardevoir",
+    "type": ["Psychic"],
+    "ability": ["Synchronize", "Trace", "HA: Telepathy"]
+  },
+  {
+    "id": 298,
+    "name": "Azurill",
+    "type": ["Normal"],
+    "ability": ["Thick Fat", "Huge Power", "HA: Sap Sipper"]
+  },
+  {
+    "id": 303,
+    "name": "Mawile",
+    "type": ["Steel"],
+    "ability": ["Hyper Cutter", "Intimidate", "HA: Sheer Force"]
   }
 ]
