@@ -79,6 +79,14 @@ textarea {
   min-width: 150px;
 }
 
+.sprite {
+  place-items: center;
+}
+
+.pokesprite {
+  transform: scale(2);
+}
+
 .name {
   font-size: 40px;
 }

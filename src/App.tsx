@@ -48,6 +48,7 @@ function App() {
       if (!fairy) {
         const checknf = checkf.map((item) => {
           const match = pokedexnf.find((item2) => item.id === item2.id);
+
           return match ? match : item;
         });
         setFound(checknf);
@@ -57,17 +58,40 @@ function App() {
     }
   };
 
+  const getSprite = (name: string) => {
+    let tempName = name.toLocaleLowerCase();
+
+    //match pokesprite syntax
+    const count = name.match(/\b\w+\b/g)?.length || 0;
+    if (count > 1) {
+      switch (true) {
+        case tempName.includes("alolan"):
+          tempName = tempName.replace("alolan", "alola");
+          break;
+        case tempName.includes("galarian"):
+          tempName = tempName.replace("galarian", "galar");
+          break;
+      }
+
+      return tempName.replace(
+        /(\w+)\s+(\w+)/,
+        (match, first, second) => `${second}-${first}`
+      );
+    }
+
+    return tempName;
+  };
+
   const getDesc = (ability: string) => {
     //check if is Hidden Ability
     const isHA = ability.startsWith("HA:");
     const tempAbility = isHA ? ability.replace(/^HA:\s*/, "") : ability;
-    const description = abilityDesc[tempAbility]
+
+    return abilityDesc[tempAbility]
       ? isHA
         ? `Hidden Ability: ${abilityDesc[tempAbility]}`
         : abilityDesc[tempAbility]
       : "Ability not found";
-
-    return description;
   };
 
   const getMulti = (type: string[]) => {
@@ -78,11 +102,11 @@ function App() {
 
     //multiply multi for dual types
     type.forEach((type) => {
-      const temp: multiType = JSON.parse(
+      const tempMulti: multiType = JSON.parse(
         JSON.stringify(typechart.find((item) => item.type === type)?.multi)
       );
-      Object.keys(temp).forEach((key) => {
-        multi[key] *= temp[key];
+      Object.keys(tempMulti).forEach((key) => {
+        multi[key] *= tempMulti[key];
       });
     });
 
@@ -137,7 +161,9 @@ function App() {
               <div className={`${type} sub`}>{type}</div>
             ))}
           </div>
-          <div className="col name">{found.name}</div>
+          <div className="col sprite">
+            <span className={`pokesprite pokemon ${getSprite(found.name)}`} />
+          </div>
           <div className="col name">{found.name}</div>
           <div className="col">
             {found.ability.map((ability) => (
@@ -166,6 +192,7 @@ function App() {
 
   const renderMulti = (type: string[]) => {
     const [weak, strong, immune] = getMulti(type);
+
     return (
       <div className="card-body">
         {Object.keys(weak).length > 0 && (
@@ -263,6 +290,7 @@ function App() {
         //check for regional forms with id
         const rmatch = regionaldex.filter((item) => item.id === found.id);
         const hasRegional = rmatch.length > 0;
+
         return (
           <>
             <hr />
