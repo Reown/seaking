@@ -60,6 +60,12 @@
     "ability": ["Pickup", "Technician", "HA: Rattled"]
   },
   {
+    "id": 52,
+    "name": "Galarian Meowth",
+    "type": ["Steel"],
+    "ability": ["Pickup", "Tough Claws", "HA: Unnerve"]
+  },
+  {
     "id": 53,
     "name": "Alolan Persian",
     "type": ["Dark"],
@@ -84,6 +90,36 @@
     "ability": ["Magnet Pull", "Sturdy", "HA: Galvanize"]
   },
   {
+    "id": 77,
+    "name": "Galarian Ponyta",
+    "type": ["Psychic"],
+    "ability": ["Run Away", "Pastel Veil", "HA: Anticipation"]
+  },
+  {
+    "id": 78,
+    "name": "Galarian Rapidash",
+    "type": ["Psychic", "Fairy"],
+    "ability": ["Run Away", "Pastel Veil", "HA: Anticipation"]
+  },
+  {
+    "id": 79,
+    "name": "Galarian Slowpoke",
+    "type": ["Psychic"],
+    "ability": ["Gluttony", "Own Tempo", "HA: Regenerator"]
+  },
+  {
+    "id": 80,
+    "name": "Galarian Slowbro",
+    "type": ["Poison", "Psychic"],
+    "ability": ["Quick Draw", "Own Tempo", "HA: Regenerator"]
+  },
+  {
+    "id": 83,
+    "name": "Galarian Farfetch'd",
+    "type": ["Fighting"],
+    "ability": ["Steadfast", "HA: Scrappy"]
+  },
+  {
     "id": 88,
     "name": "Alolan Grimer",
     "type": ["Poison", "Dark"],
@@ -106,5 +142,59 @@
     "name": "Alolan Marowak",
     "type": ["Fire", "Ghost"],
     "ability": ["Cursed Body", "Lightning Rod", "HA: Rock Head"]
+  },
+  {
+    "id": 110,
+    "name": "Galarian Weezing",
+    "type": ["Poison", "Fairy"],
+    "ability": ["Levitate", "Neutralizing Gas", "HA: Misty Surge"]
+  },
+  {
+    "id": 122,
+    "name": "Galarian Mr. Mime",
+    "type": ["Ice", "Psychic"],
+    "ability": ["Vital Spirit", "Screen Cleaner", "HA: Ice Body"]
+  },
+  {
+    "id": 144,
+    "name": "Galarian Articuno",
+    "type": ["Psychic", "Flying"],
+    "ability": ["Competitive"]
+  },
+  {
+    "id": 145,
+    "name": "Galarian Zapdos",
+    "type": ["Fighting", "Flying"],
+    "ability": ["Defiant"]
+  },
+  {
+    "id": 146,
+    "name": "Galarian Moltres",
+    "type": ["Dark", "Flying"],
+    "ability": ["Berserk"]
+  },
+  {
+    "id": 199,
+    "name": "Galarian Slowking",
+    "type": ["Poison", "Psychic"],
+    "ability": ["Curious Medicine", "Own Tempo", "HA: Regenerator"]
+  },
+  {
+    "id": 222,
+    "name": "Galarian Corsola",
+    "type": ["Ghost"],
+    "ability": ["Weak Armor", "HA: Cursed Body"]
+  },
+  {
+    "id": 263,
+    "name": "Galarian Zigzagoon",
+    "type": ["Dark", "Normal"],
+    "ability": ["Pickup", "Gluttony", "HA: Quick Feet"]
+  },
+  {
+    "id": 264,
+    "name": "Galarian Linoone",
+    "type": ["Dark", "Normal"],
+    "ability": ["Pickup", "Gluttony", "HA: Quick Feet"]
   }
 ]
