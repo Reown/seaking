@@ -81,42 +81,42 @@
     "id": 280,
     "name": "Ralts",
     "type": ["Psychic"],
-    "ability": ["Synchronize", "Trace", "HA: Telepathy"]
+    "ability": ["Synchronize", "Trace", "Telepathy"]
   },
   {
     "id": 281,
     "name": "Kirlia",
     "type": ["Psychic"],
-    "ability": ["Synchronize", "Trace", "HA: Telepathy"]
+    "ability": ["Synchronize", "Trace", "Telepathy"]
   },
   {
     "id": 282,
     "name": "Gardevoir",
     "type": ["Psychic"],
-    "ability": ["Synchronize", "Trace", "HA: Telepathy"]
+    "ability": ["Synchronize", "Trace", "Telepathy"]
   },
   {
     "id": 298,
     "name": "Azurill",
     "type": ["Normal"],
-    "ability": ["Thick Fat", "Huge Power", "HA: Sap Sipper"]
+    "ability": ["Thick Fat", "Huge Power", "Sap Sipper"]
   },
   {
     "id": 303,
     "name": "Mawile",
     "type": ["Steel"],
-    "ability": ["Hyper Cutter", "Intimidate", "HA: Sheer Force"]
+    "ability": ["Hyper Cutter", "Intimidate", "Sheer Force"]
   },
   {
     "id": 439,
     "name": "Mime Jr.",
     "type": ["Psychic"],
-    "ability": ["Soundproof", "Filter", "HA: Technician"]
+    "ability": ["Soundproof", "Filter", "Technician"]
   },
   {
     "id": 468,
     "name": "Togekiss",
     "type": ["Normal", "Flying"],
-    "ability": ["Hustle", "Serene Grace", "HA: Super Luck"]
+    "ability": ["Hustle", "Serene Grace", "Super Luck"]
   }
 ]
