@@ -59,24 +59,30 @@ function App() {
   };
 
   const getSprite = (name: string) => {
-    let tempName = name.toLocaleLowerCase();
+    //match base pokesprite syntax
+    let tempName = name
+      .toLocaleLowerCase()
+      .replace(/['.]/g, "")
+      .replace(/\s+/g, "-")
+      //nidorans
+      .replace(/♀/g, "-f")
+      .replace(/♂/g, "-m");
 
-    //match pokesprite syntax
-    const count = name.match(/\b\w+\b/g)?.length || 0;
-    if (count > 1) {
-      switch (true) {
-        case tempName.includes("alolan"):
-          tempName = tempName.replace("alolan", "alola");
-          break;
-        case tempName.includes("galarian"):
-          tempName = tempName.replace("galarian", "galar");
-          break;
+    //regional form syntax
+    const replacements = [
+      ["alolan", "alola"],
+      ["galarian", "galar"],
+    ];
+
+    for (const [target, replacement] of replacements) {
+      if (tempName.includes(target)) {
+        return tempName
+          .replace(target, replacement)
+          .replace(
+            /^([^-\s]+)-(.*)$/,
+            (match, first, rest) => `${rest}-${first}`
+          );
       }
-
-      return tempName.replace(
-        /(\w+)\s+(\w+)/,
-        (match, first, second) => `${second}-${first}`
-      );
     }
 
     return tempName;
@@ -254,7 +260,7 @@ function App() {
         <button
           className={`nav-link ${isDefault ? "active" : ""}`}
           data-bs-toggle="tab"
-          data-bs-target={`#${name.replace(/\s+/g, "-")}`}
+          data-bs-target={`#${name.replace(/[\s']+/g, "-")}`}
           aria-selected={`${isDefault ? "true" : "false"}`}
         >
           {name}
@@ -267,7 +273,7 @@ function App() {
     return (
       <div
         className={`tab-pane fade ${isDefault ? "show active" : ""}`}
-        id={`${found.name.replace(/\s+/g, "-")}`}
+        id={`${found.name.replace(/[\s']+/g, "-")}`}
       >
         {renderPoke(found)}
         {renderMulti(found.type)}
