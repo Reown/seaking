@@ -82,16 +82,13 @@ function App() {
     return tempName;
   };
 
-  const getDesc = (ability: string) => {
-    //check if is Hidden Ability
-    const isHA = ability.startsWith("HA:");
-    const tempAbility = isHA ? ability.replace(/^HA:\s*/, "") : ability;
-
-    return abilityDesc[tempAbility]
+  const getDesc = (ability: string, isHA: boolean) => {
+    //set prefix for HA / return not found
+    return abilityDesc[ability]
       ? isHA
-        ? `Hidden Ability: ${abilityDesc[tempAbility]}`
-        : abilityDesc[tempAbility]
-      : "Ability not found";
+        ? `Hidden Ability: ${abilityDesc[ability]}`
+        : abilityDesc[ability]
+      : "Ability description not found";
   };
 
   const getMulti = (type: string[]) => {
@@ -166,24 +163,29 @@ function App() {
           </div>
           <div className="col name">{found.name}</div>
           <div className="col">
-            {found.ability.map((ability) => (
-              <div
-                className="ability sub"
-                onMouseEnter={() => {
-                  setHoverAbility(ability);
-                  setHoverPokemon(found.name);
-                }}
-                onMouseLeave={() => {
-                  setHoverAbility(null);
-                  setHoverPokemon(null);
-                }}
-              >
-                {ability}
-                {hoverAbility === ability && hoverPokemon === found.name && (
-                  <div className="hover">{getDesc(ability)}</div>
-                )}
-              </div>
-            ))}
+            {found.ability.map((ability, index, array) => {
+              //check if is hidden ability
+              const isHA = index > 0 && index === array.length - 1;
+
+              return (
+                <div
+                  className="ability sub"
+                  onMouseEnter={() => {
+                    setHoverAbility(ability);
+                    setHoverPokemon(found.name);
+                  }}
+                  onMouseLeave={() => {
+                    setHoverAbility(null);
+                    setHoverPokemon(null);
+                  }}
+                >
+                  {isHA ? `HA: ${ability}` : ability}
+                  {hoverAbility === ability && hoverPokemon === found.name && (
+                    <div className="hover">{getDesc(ability, isHA)}</div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
