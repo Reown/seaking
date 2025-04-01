@@ -106,5 +106,17 @@
     "name": "Mawile",
     "type": ["Steel"],
     "ability": ["Hyper Cutter", "Intimidate", "HA: Sheer Force"]
+  },
+  {
+    "id": 439,
+    "name": "Mime Jr.",
+    "type": ["Psychic"],
+    "ability": ["Soundproof", "Filter", "HA: Technician"]
+  },
+  {
+    "id": 468,
+    "name": "Togekiss",
+    "type": ["Normal", "Flying"],
+    "ability": ["Hustle", "Serene Grace", "HA: Super Luck"]
   }
 ]

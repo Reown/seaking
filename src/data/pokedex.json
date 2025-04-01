@@ -2314,5 +2314,647 @@
     "name": "Deoxys",
     "type": ["Psychic"],
     "ability": ["Pressure"]
+  },
+  {
+    "id": 387,
+    "name": "Turtwig",
+    "type": ["Grass"],
+    "ability": ["Overgrow", "HA: Shell Armor"]
+  },
+  {
+    "id": 388,
+    "name": "Grotle",
+    "type": ["Grass"],
+    "ability": ["Overgrow", "HA: Shell Armor"]
+  },
+  {
+    "id": 389,
+    "name": "Torterra",
+    "type": ["Grass", "Ground"],
+    "ability": ["Overgrow", "HA: Shell Armor"]
+  },
+  {
+    "id": 390,
+    "name": "Chimchar",
+    "type": ["Fire"],
+    "ability": ["Blaze", "HA: Iron Fist"]
+  },
+  {
+    "id": 391,
+    "name": "Monferno",
+    "type": ["Fire", "Fighting"],
+    "ability": ["Blaze", "HA: Iron Fist"]
+  },
+  {
+    "id": 392,
+    "name": "Infernape",
+    "type": ["Fire", "Fighting"],
+    "ability": ["Blaze", "HA: Iron Fist"]
+  },
+  {
+    "id": 393,
+    "name": "Piplup",
+    "type": ["Water"],
+    "ability": ["Torrent", "HA: Defiant"]
+  },
+  {
+    "id": 394,
+    "name": "Prinplup",
+    "type": ["Water"],
+    "ability": ["Torrent", "HA: Defiant"]
+  },
+  {
+    "id": 395,
+    "name": "Empoleon",
+    "type": ["Water", "Steel"],
+    "ability": ["Torrent", "HA: Defiant"]
+  },
+  {
+    "id": 396,
+    "name": "Starly",
+    "type": ["Normal", "Flying"],
+    "ability": ["Keen Eye", "HA: Reckless"]
+  },
+  {
+    "id": 397,
+    "name": "Staravia",
+    "type": ["Normal", "Flying"],
+    "ability": ["Intimidate", "HA: Reckless"]
+  },
+  {
+    "id": 398,
+    "name": "Staraptor",
+    "type": ["Normal", "Flying"],
+    "ability": ["Intimidate", "HA: Reckless"]
+  },
+  {
+    "id": 399,
+    "name": "Bidoof",
+    "type": ["Normal"],
+    "ability": ["Simple", "Unaware", "HA: Moody"]
+  },
+  {
+    "id": 400,
+    "name": "Bibarel",
+    "type": ["Normal", "Water"],
+    "ability": ["Simple", "Unaware", "HA: Moody"]
+  },
+  {
+    "id": 401,
+    "name": "Kricketot",
+    "type": ["Bug"],
+    "ability": ["Shed Skin", "HA: Run Away"]
+  },
+  {
+    "id": 402,
+    "name": "Kricketune",
+    "type": ["Bug"],
+    "ability": ["Swarm", "HA: Technician"]
+  },
+  {
+    "id": 403,
+    "name": "Shinx",
+    "type": ["Electric"],
+    "ability": ["Rivalry", "Intimidate", "HA: Guts"]
+  },
+  {
+    "id": 404,
+    "name": "Luxio",
+    "type": ["Electric"],
+    "ability": ["Rivalry", "Intimidate", "HA: Guts"]
+  },
+  {
+    "id": 405,
+    "name": "Luxray",
+    "type": ["Electric"],
+    "ability": ["Rivalry", "Intimidate", "HA: Guts"]
+  },
+  {
+    "id": 406,
+    "name": "Budew",
+    "type": ["Grass", "Poison"],
+    "ability": ["Natural Cure", "Poison Point", "HA: Leaf Guard"]
+  },
+  {
+    "id": 407,
+    "name": "Roserade",
+    "type": ["Grass", "Poison"],
+    "ability": ["Natural Cure", "Poison Point", "HA: Technician"]
+  },
+  {
+    "id": 408,
+    "name": "Cranidos",
+    "type": ["Rock"],
+    "ability": ["Mold Breaker", "HA: Sheer Force"]
+  },
+  {
+    "id": 409,
+    "name": "Rampardos",
+    "type": ["Rock"],
+    "ability": ["Mold Breaker", "HA: Sheer Force"]
+  },
+  {
+    "id": 410,
+    "name": "Shieldon",
+    "type": ["Rock", "Steel"],
+    "ability": ["Sturdy", "HA: Soundproof"]
+  },
+  {
+    "id": 411,
+    "name": "Bastiodon",
+    "type": ["Rock", "Steel"],
+    "ability": ["Sturdy", "HA: Soundproof"]
+  },
+  {
+    "id": 412,
+    "name": "Burmy",
+    "type": ["Bug"],
+    "ability": ["Shed Skin", "HA: Overcoat"]
+  },
+  {
+    "id": 413,
+    "name": "Wormadam",
+    "type": ["Bug", "Grass"],
+    "ability": ["Anticipation", "HA: Overcoat"]
+  },
+  {
+    "id": 414,
+    "name": "Mothim",
+    "type": ["Bug", "Flying"],
+    "ability": ["Swarm", "HA: Tinted Lens"]
+  },
+  {
+    "id": 415,
+    "name": "Combee",
+    "type": ["Bug", "Flying"],
+    "ability": ["Honey Gather", "HA: Hustle"]
+  },
+  {
+    "id": 416,
+    "name": "Vespiquen",
+    "type": ["Bug", "Flying"],
+    "ability": ["Pressure", "HA: Unnerve"]
+  },
+  {
+    "id": 417,
+    "name": "Pachirisu",
+    "type": ["Electric"],
+    "ability": ["Run Away", "Pickup", "HA: Volt Absorb"]
+  },
+  {
+    "id": 418,
+    "name": "Buizel",
+    "type": ["Water"],
+    "ability": ["Swift Swim", "HA: Water Veil"]
+  },
+  {
+    "id": 419,
+    "name": "Floatzel",
+    "type": ["Water"],
+    "ability": ["Swift Swim", "HA: Water Veil"]
+  },
+  {
+    "id": 420,
+    "name": "Cherubi",
+    "type": ["Grass"],
+    "ability": ["Chlorophyll"]
+  },
+  {
+    "id": 421,
+    "name": "Cherrim",
+    "type": ["Grass"],
+    "ability": ["Flower Gift"]
+  },
+  {
+    "id": 422,
+    "name": "Shellos",
+    "type": ["Water"],
+    "ability": ["Sticky Hold", "Storm Drain", "HA: Sand Force"]
+  },
+  {
+    "id": 423,
+    "name": "Gastrodon",
+    "type": ["Water", "Ground"],
+    "ability": ["Sticky Hold", "Storm Drain", "HA: Sand Force"]
+  },
+  {
+    "id": 424,
+    "name": "Ambipom",
+    "type": ["Normal"],
+    "ability": ["Technician", "Pickup", "HA: Skill Link"]
+  },
+  {
+    "id": 425,
+    "name": "Drifloon",
+    "type": ["Ghost", "Flying"],
+    "ability": ["Aftermath", "Unburden", "HA: Flare Boost"]
+  },
+  {
+    "id": 426,
+    "name": "Drifblim",
+    "type": ["Ghost", "Flying"],
+    "ability": ["Aftermath", "Unburden", "HA: Flare Boost"]
+  },
+  {
+    "id": 427,
+    "name": "Buneary",
+    "type": ["Normal"],
+    "ability": ["Run Away", "Klutz", "HA: Limber"]
+  },
+  {
+    "id": 428,
+    "name": "Lopunny",
+    "type": ["Normal"],
+    "ability": ["Cute Charm", "Klutz", "HA: Limber"]
+  },
+  {
+    "id": 429,
+    "name": "Mismagius",
+    "type": ["Ghost"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 430,
+    "name": "Honchkrow",
+    "type": ["Dark", "Flying"],
+    "ability": ["Insomnia", "Super Luck", "HA: Moxie"]
+  },
+  {
+    "id": 431,
+    "name": "Glameow",
+    "type": ["Normal"],
+    "ability": ["Limber", "Own Tempo", "HA: Keen Eye"]
+  },
+  {
+    "id": 432,
+    "name": "Purugly",
+    "type": ["Normal"],
+    "ability": ["Thick Fat", "Own Tempo", "HA: Defiant"]
+  },
+  {
+    "id": 433,
+    "name": "Chingling",
+    "type": ["Psychic"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 434,
+    "name": "Stunky",
+    "type": ["Poison", "Dark"],
+    "ability": ["Stench", "Aftermath", "HA: Keen Eye"]
+  },
+  {
+    "id": 435,
+    "name": "Skuntank",
+    "type": ["Poison", "Dark"],
+    "ability": ["Stench", "Aftermath", "HA: Keen Eye"]
+  },
+  {
+    "id": 436,
+    "name": "Bronzor",
+    "type": ["Steel", "Psychic"],
+    "ability": ["Levitate", "Heatproof", "HA: Heavy Metal"]
+  },
+  {
+    "id": 437,
+    "name": "Bronzong",
+    "type": ["Steel", "Psychic"],
+    "ability": ["Levitate", "Heatproof", "HA: Heavy Metal"]
+  },
+  {
+    "id": 438,
+    "name": "Bonsly",
+    "type": ["Rock"],
+    "ability": ["Sturdy", "Rock Head", "HA: Rattled"]
+  },
+  {
+    "id": 439,
+    "name": "Mime Jr.",
+    "type": ["Psychic", "Fairy"],
+    "ability": ["Soundproof", "Filter", "HA: Technician"]
+  },
+  {
+    "id": 440,
+    "name": "Happiny",
+    "type": ["Normal"],
+    "ability": ["Natural Cure", "Serene Grace", "HA: Friend Guard"]
+  },
+  {
+    "id": 441,
+    "name": "Chatot",
+    "type": ["Normal", "Flying"],
+    "ability": ["Keen Eye", "Tangled Feet", "HA: Big Pecks"]
+  },
+  {
+    "id": 442,
+    "name": "Spiritomb",
+    "type": ["Ghost", "Dark"],
+    "ability": ["Pressure", "HA: Infiltrator"]
+  },
+  {
+    "id": 443,
+    "name": "Gible",
+    "type": ["Dragon", "Ground"],
+    "ability": ["Sand Veil", "HA: Rough Skin"]
+  },
+  {
+    "id": 444,
+    "name": "Gabite",
+    "type": ["Dragon", "Ground"],
+    "ability": ["Sand Veil", "HA: Rough Skin"]
+  },
+  {
+    "id": 445,
+    "name": "Garchomp",
+    "type": ["Dragon", "Ground"],
+    "ability": ["Sand Veil", "HA: Rough Skin"]
+  },
+  {
+    "id": 446,
+    "name": "Munchlax",
+    "type": ["Normal"],
+    "ability": ["Pickup", "Thick Fat", "HA: Gluttony"]
+  },
+  {
+    "id": 447,
+    "name": "Riolu",
+    "type": ["Fighting"],
+    "ability": ["Steadfast", "Inner Focus", "HA: Prankster"]
+  },
+  {
+    "id": 448,
+    "name": "Lucario",
+    "type": ["Fighting", "Steel"],
+    "ability": ["Steadfast", "Inner Focus", "HA: Justified"]
+  },
+  {
+    "id": 449,
+    "name": "Hippopotas",
+    "type": ["Ground"],
+    "ability": ["Sand Stream", "HA: Sand Force"]
+  },
+  {
+    "id": 450,
+    "name": "Hippowdon",
+    "type": ["Ground"],
+    "ability": ["Sand Stream", "HA: Sand Force"]
+  },
+  {
+    "id": 451,
+    "name": "Skorupi",
+    "type": ["Poison", "Bug"],
+    "ability": ["Battle Armor", "Sniper", "HA: Keen Eye"]
+  },
+  {
+    "id": 452,
+    "name": "Drapion",
+    "type": ["Poison", "Dark"],
+    "ability": ["Battle Armor", "Sniper", "HA: Keen Eye"]
+  },
+  {
+    "id": 453,
+    "name": "Croagunk",
+    "type": ["Poison", "Fighting"],
+    "ability": ["Anticipation", "Dry Skin", "HA: Poison Touch"]
+  },
+  {
+    "id": 454,
+    "name": "Toxicroak",
+    "type": ["Poison", "Fighting"],
+    "ability": ["Anticipation", "Dry Skin", "HA: Poison Touch"]
+  },
+  {
+    "id": 455,
+    "name": "Carnivine",
+    "type": ["Grass"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 456,
+    "name": "Finneon",
+    "type": ["Water"],
+    "ability": ["Swift Swim", "Storm Drain", "HA: Water Veil"]
+  },
+  {
+    "id": 457,
+    "name": "Lumineon",
+    "type": ["Water"],
+    "ability": ["Swift Swim", "Storm Drain", "HA: Water Veil"]
+  },
+  {
+    "id": 458,
+    "name": "Mantyke",
+    "type": ["Water", "Flying"],
+    "ability": ["Swift Swim", "Water Absorb", "HA: Water Veil"]
+  },
+  {
+    "id": 459,
+    "name": "Snover",
+    "type": ["Grass", "Ice"],
+    "ability": ["Snow Warning", "HA: Soundproof"]
+  },
+  {
+    "id": 460,
+    "name": "Abomasnow",
+    "type": ["Grass", "Ice"],
+    "ability": ["Snow Warning", "HA: Soundproof"]
+  },
+  {
+    "id": 461,
+    "name": "Weavile",
+    "type": ["Dark", "Ice"],
+    "ability": ["Pressure", "HA: Pickpocket"]
+  },
+  {
+    "id": 462,
+    "name": "Magnezone",
+    "type": ["Electric", "Steel"],
+    "ability": ["Magnet Pull", "Sturdy", "HA: Analytic"]
+  },
+  {
+    "id": 463,
+    "name": "Lickilicky",
+    "type": ["Normal"],
+    "ability": ["Own Tempo", "Oblivious", "HA: Cloud Nine"]
+  },
+  {
+    "id": 464,
+    "name": "Rhyperior",
+    "type": ["Ground", "Rock"],
+    "ability": ["Lightning Rod", "Solid Rock", "HA: Reckless"]
+  },
+  {
+    "id": 465,
+    "name": "Tangrowth",
+    "type": ["Grass"],
+    "ability": ["Chlorophyll", "Leaf Guard", "HA: Regenerator"]
+  },
+  {
+    "id": 466,
+    "name": "Electivire",
+    "type": ["Electric"],
+    "ability": ["Motor Drive", "HA: Vital Spirit"]
+  },
+  {
+    "id": 467,
+    "name": "Magmortar",
+    "type": ["Fire"],
+    "ability": ["Flame Body", "HA: Vital Spirit"]
+  },
+  {
+    "id": 468,
+    "name": "Togekiss",
+    "type": ["Fairy", "Flying"],
+    "ability": ["Hustle", "Serene Grace", "HA: Super Luck"]
+  },
+  {
+    "id": 469,
+    "name": "Yanmega",
+    "type": ["Bug", "Flying"],
+    "ability": ["Speed Boost", "Tinted Lens", "HA: Frisk"]
+  },
+  {
+    "id": 470,
+    "name": "Leafeon",
+    "type": ["Grass"],
+    "ability": ["Leaf Guard", "HA: Chlorophyll"]
+  },
+  {
+    "id": 471,
+    "name": "Glaceon",
+    "type": ["Ice"],
+    "ability": ["Snow Cloak", "HA: Ice Body"]
+  },
+  {
+    "id": 472,
+    "name": "Gliscor",
+    "type": ["Ground", "Flying"],
+    "ability": ["Hyper Cutter", "Sand Veil", "HA: Poison Heal"]
+  },
+  {
+    "id": 473,
+    "name": "Mamoswine",
+    "type": ["Ice", "Ground"],
+    "ability": ["Oblivious", "Snow Cloak", "HA: Thick Fat"]
+  },
+  {
+    "id": 474,
+    "name": "Porygon-Z",
+    "type": ["Normal"],
+    "ability": ["Adaptability", "Download", "HA: Analytic"]
+  },
+  {
+    "id": 475,
+    "name": "Gallade",
+    "type": ["Psychic", "Fighting"],
+    "ability": ["Steadfast", "Sharpness", "HA: Justified"]
+  },
+  {
+    "id": 476,
+    "name": "Probopass",
+    "type": ["Rock", "Steel"],
+    "ability": ["Sturdy", "Magnet Pull", "HA: Sand Force"]
+  },
+  {
+    "id": 477,
+    "name": "Dusknoir",
+    "type": ["Ghost"],
+    "ability": ["Pressure", "HA: Frisk"]
+  },
+  {
+    "id": 478,
+    "name": "Froslass",
+    "type": ["Ice", "Ghost"],
+    "ability": ["Snow Cloak", "HA: Cursed Body"]
+  },
+  {
+    "id": 479,
+    "name": "Rotom",
+    "type": ["Electric", "Ghost"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 480,
+    "name": "Uxie",
+    "type": ["Psychic"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 481,
+    "name": "Mesprit",
+    "type": ["Psychic"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 482,
+    "name": "Azelf",
+    "type": ["Psychic"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 483,
+    "name": "Dialga",
+    "type": ["Steel", "Dragon"],
+    "ability": ["Pressure", "HA: Telepathy"]
+  },
+  {
+    "id": 484,
+    "name": "Palkia",
+    "type": ["Water", "Dragon"],
+    "ability": ["Pressure", "HA: Telepathy"]
+  },
+  {
+    "id": 485,
+    "name": "Heatran",
+    "type": ["Fire", "Steel"],
+    "ability": ["Flash Fire", "HA: Flame Body"]
+  },
+  {
+    "id": 486,
+    "name": "Regigigas",
+    "type": ["Normal"],
+    "ability": ["Slow Start"]
+  },
+  {
+    "id": 487,
+    "name": "Giratina",
+    "type": ["Ghost", "Dragon"],
+    "ability": ["Pressure", "HA: Telepathy"]
+  },
+  {
+    "id": 488,
+    "name": "Cresselia",
+    "type": ["Psychic"],
+    "ability": ["Levitate"]
+  },
+  {
+    "id": 489,
+    "name": "Phione",
+    "type": ["Water"],
+    "ability": ["Hydration"]
+  },
+  {
+    "id": 490,
+    "name": "Manaphy",
+    "type": ["Water"],
+    "ability": ["Hydration"]
+  },
+  {
+    "id": 491,
+    "name": "Darkrai",
+    "type": ["Dark"],
+    "ability": ["Bad Dreams"]
+  },
+  {
+    "id": 492,
+    "name": "Shaymin",
+    "type": ["Grass"],
+    "ability": ["Natural Cure"]
+  },
+  {
+    "id": 493,
+    "name": "Arceus",
+    "type": ["Normal"],
+    "ability": ["Multitype"]
   }
 ]
