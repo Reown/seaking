@@ -25,7 +25,7 @@ interface abilityDescType {
 function App() {
   const [query, setQuery] = useState<string>("");
   const [found, setFound] = useState<pokedexType[]>([]);
-  const [fairy, setFairy] = useState<boolean>(true);
+  const [fairy, setFairy] = useState<boolean>(false);
   const [hoverAbility, setHoverAbility] = useState<string | null>(null);
   const [hoverPokemon, setHoverPokemon] = useState<string | null>(null);
   const abilityDesc = abilityDescJson as abilityDescType;
@@ -45,7 +45,7 @@ function App() {
       );
 
       //check if fairy is toggled, replace from pokedex_nofairy
-      if (!fairy) {
+      if (fairy) {
         const checknf = checkf.map((item) => {
           const match = pokedexnf.find((item2) => item.id === item2.id);
 
@@ -89,7 +89,7 @@ function App() {
   };
 
   const getDesc = (ability: string, isHA: boolean) => {
-    //set prefix for HA / return not found
+    //specify HA in description / return not found
     return abilityDesc[ability]
       ? isHA
         ? `Hidden Ability: ${abilityDesc[ability]}`
@@ -139,12 +139,11 @@ function App() {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              Gen 1-5 Fairy
+              Revert Gen 1-5 Fairy
               <div className="form-switch">
                 <input
                   className="form-check-input"
                   type="checkbox"
-                  defaultChecked
                   onChange={() => setFairy(!fairy)}
                 />
               </div>
@@ -170,7 +169,7 @@ function App() {
           <div className="col name">{found.name}</div>
           <div className="col">
             {found.ability.map((ability, index, array) => {
-              //check if is hidden ability
+              //check if is hidden ability, > 1 & last
               const isHA = index > 0 && index === array.length - 1;
 
               return (
