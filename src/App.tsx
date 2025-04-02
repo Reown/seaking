@@ -26,6 +26,7 @@ function App() {
   const [query, setQuery] = useState<string>("");
   const [found, setFound] = useState<pokedexType[]>([]);
   const [fairy, setFairy] = useState<boolean>(false);
+  const [shiny, setShiny] = useState<boolean>(false);
   const [hoverAbility, setHoverAbility] = useState<string | null>(null);
   const [hoverPokemon, setHoverPokemon] = useState<string | null>(null);
   const abilityDesc = abilityDescJson as abilityDescType;
@@ -138,6 +139,16 @@ function App() {
             Seaking
           </a>
           <ul className="navbar-nav ms-auto">
+            <li className="nav-item me-3">
+              Shiny Sprites
+              <div className="form-switch">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  onChange={() => setShiny(!shiny)}
+                />
+              </div>
+            </li>
             <li className="nav-item">
               Revert Gen 1-5 Fairy
               <div className="form-switch">
@@ -164,7 +175,11 @@ function App() {
             ))}
           </div>
           <div className="col sprite">
-            <span className={`pokesprite pokemon ${getSprite(found.name)}`} />
+            <span
+              className={`pokesprite pokemon ${getSprite(found.name)} ${
+                shiny ? "shiny" : ""
+              }`}
+            />
           </div>
           <div className="col name">{found.name}</div>
           <div className="col">
