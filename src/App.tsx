@@ -4,8 +4,8 @@ import pokedexnf from "./data/pokedex_nofairy.json";
 import regionaldex from "./data/regionaldex.json";
 import typechart from "./data/typechart.json";
 import abilityDescJson from "./data/ability.json";
-import "./App.css";
-import "./Type.css";
+import "./css/App.css";
+import "./css/Type.css";
 
 interface pokedexType {
   id: number;
