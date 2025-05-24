@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import pokedex from "./data/pokedex.json";
-import pokedexnf from "./data/pokedex_nofairy.json";
+import pokedexnf from "./data/pokedexnofairy.json";
 import regionaldex from "./data/regionaldex.json";
 import typechart from "./data/typechart.json";
-import abilityDescJson from "./data/ability.json";
+import abilityDescJson from "./data/abilitydesc.json";
 import "./css/App.css";
 import "./css/Type.css";
 
