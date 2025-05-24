@@ -131,6 +131,15 @@ function App() {
     return [weak, strong, immune];
   };
 
+  const handleAbilityHover = (name: string | null, ability: string | null) => {
+    setHoverPokemon(name || null);
+    setHoverAbility(ability || null);
+  };
+
+  const handleAbilityClick = (name: string, ability: string) => {
+    console.log(name, ability);
+  };
+
   const renderNavbar = () => {
     return (
       <nav className="navbar navbar-dark navbar-expand-lg">
@@ -191,12 +200,13 @@ function App() {
                 <div
                   className="ability sub"
                   onMouseEnter={() => {
-                    setHoverAbility(ability);
-                    setHoverPokemon(found.name);
+                    handleAbilityHover(found.name, ability);
                   }}
                   onMouseLeave={() => {
-                    setHoverAbility(null);
-                    setHoverPokemon(null);
+                    handleAbilityHover(null, null);
+                  }}
+                  onClick={() => {
+                    handleAbilityClick(found.name, ability);
                   }}
                 >
                   {isHA ? `HA: ${ability}` : ability}
