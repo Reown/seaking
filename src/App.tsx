@@ -4,7 +4,7 @@ import pokedexnf from "./data/pokedexnofairy.json";
 import regionaldex from "./data/regionaldex.json";
 import typechart from "./data/typechart.json";
 import abilitymulti from "./data/abilitymulti.json";
-import abilityDescJson from "./data/abilitydesc.json";
+import abilitydescjson from "./data/abilitydesc.json";
 import "./css/App.css";
 import "./css/Type.css";
 
@@ -33,7 +33,7 @@ function App() {
   const [hoverAbility, setHoverAbility] = useState<string | null>(null);
   const [hoverPokemon, setHoverPokemon] = useState<string | null>(null);
   const [activeAbility, setActiveAbility] = useState<activeAbilityType>({});
-  const abilityDesc = abilityDescJson as abilityDescType;
+  const abilitydesc = abilitydescjson as abilityDescType;
 
   useEffect(() => {
     getPokemon(query);
@@ -96,14 +96,14 @@ function App() {
 
   const getDesc = (ability: string, isHA: boolean) => {
     //specify HA in description / return not found
-    return abilityDesc[ability]
+    return abilitydesc[ability]
       ? isHA
-        ? `Hidden Ability: ${abilityDesc[ability]}`
-        : abilityDesc[ability]
+        ? `Hidden Ability: ${abilitydesc[ability]}`
+        : abilitydesc[ability]
       : "Ability description not found";
   };
 
-  const getMulti = (type: string[]) => {
+  const getMulti = (name: string, type: string[]) => {
     //deep copy from json
     let multi: multiType = JSON.parse(
       JSON.stringify(typechart.find((def) => def.type === "default")?.multi)
@@ -118,6 +118,19 @@ function App() {
         multi[key] *= tempMulti[key];
       });
     });
+
+    //check ability for multi
+    if (name in activeAbility) {
+      const amatch = abilitymulti.find(
+        (item) => item.ability === activeAbility[name]
+      );
+      if (amatch) {
+        const amulti: multiType = JSON.parse(JSON.stringify(amatch.multi));
+        Object.keys(amulti).forEach((key) => {
+          multi[key] *= amulti[key];
+        });
+      }
+    }
 
     //split multi to weak/strong/immune
     const weak: multiType = {};
@@ -250,8 +263,8 @@ function App() {
     );
   };
 
-  const renderMulti = (type: string[]) => {
-    const [weak, strong, immune] = getMulti(type);
+  const renderMulti = (name: string, type: string[]) => {
+    const [weak, strong, immune] = getMulti(name, type);
 
     return (
       <div className="card-body">
@@ -328,7 +341,7 @@ function App() {
         id={`${found.name.replace(/[\s']+/g, "-")}`}
       >
         {renderPoke(found)}
-        {renderMulti(found.type)}
+        {renderMulti(found.name, found.type)}
       </div>
     );
   };
@@ -369,7 +382,7 @@ function App() {
               ) : (
                 <>
                   {renderPoke(found)}
-                  {renderMulti(found.type)}
+                  {renderMulti(found.name, found.type)}
                 </>
               )}
             </div>
