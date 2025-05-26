@@ -1,0 +1,125 @@
+[
+  {
+    "ability": "Dry Skin",
+    "multi": {
+      "Fire": 1.25,
+      "Water": 0.0
+    }
+  },
+  {
+    "ability": "Filter",
+    "multi": {
+      "SuperEffective": 0.75
+    }
+  },
+  {
+    "ability": "Solid Rock",
+    "multi": {
+      "SuperEffective": 0.75
+    }
+  },
+  {
+    "ability": "Prism Armor",
+    "multi": {
+      "SuperEffective": 0.75
+    }
+  },
+  {
+    "ability": "Flash Fire",
+    "multi": {
+      "Fire": 0.0
+    }
+  },
+  {
+    "ability": "Heatproof",
+    "multi": {
+      "Fire": 0.5
+    }
+  },
+  {
+    "ability": "Levitate",
+    "multi": {
+      "Ground": 0.0
+    }
+  },
+  {
+    "ability": "Motor Drive",
+    "multi": {
+      "Electric": 0.0
+    }
+  },
+  {
+    "ability": "Thick Fat",
+    "multi": {
+      "Fire": 0.5,
+      "Water": 0.5
+    }
+  },
+  {
+    "ability": "Volt Absorb",
+    "multi": {
+      "Electric": 0.0
+    }
+  },
+  {
+    "ability": "Water Absorb",
+    "multi": {
+      "Water": 0.0
+    }
+  },
+  {
+    "ability": "Wonder Guard",
+    "multi": {
+      "Normal": 0.0,
+      "NotVeryEffective": 0.0
+    }
+  },
+  {
+    "ability": "Sap Sipper",
+    "multi": {
+      "Grass": 0.0
+    }
+  },
+  {
+    "ability": "Purifying Salt",
+    "multi": {
+      "Ghost": 0.5
+    }
+  },
+  {
+    "ability": "Fluffy",
+    "multi": {
+      "Fire": 2.0
+    }
+  },
+  {
+    "ability": "Earth Eater",
+    "multi": {
+      "Ground": 0.0
+    }
+  },
+  {
+    "ability": "Well-Baked Body",
+    "multi": {
+      "Fire": 0.0
+    }
+  },
+  {
+    "ability": "Water Bubble",
+    "multi": {
+      "Fire": 0.5
+    }
+  },
+  {
+    "ability": "Desolate Land",
+    "multi": {
+      "Water": 0.0
+    }
+  },
+  {
+    "ability": "Primordial Sea",
+    "multi": {
+      "Fire": 0.0
+    }
+  }
+]

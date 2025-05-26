@@ -3,6 +3,7 @@ import pokedex from "./data/pokedex.json";
 import pokedexnf from "./data/pokedexnofairy.json";
 import regionaldex from "./data/regionaldex.json";
 import typechart from "./data/typechart.json";
+import abilitymulti from "./data/abilitymulti.json";
 import abilityDescJson from "./data/abilitydesc.json";
 import "./css/App.css";
 import "./css/Type.css";
@@ -22,6 +23,8 @@ interface abilityDescType {
   [key: string]: string;
 }
 
+type activeAbilityType = Record<string, string>;
+
 function App() {
   const [query, setQuery] = useState<string>("");
   const [found, setFound] = useState<pokedexType[]>([]);
@@ -29,6 +32,7 @@ function App() {
   const [shiny, setShiny] = useState<boolean>(false);
   const [hoverAbility, setHoverAbility] = useState<string | null>(null);
   const [hoverPokemon, setHoverPokemon] = useState<string | null>(null);
+  const [activeAbility, setActiveAbility] = useState<activeAbilityType>({});
   const abilityDesc = abilityDescJson as abilityDescType;
 
   useEffect(() => {
@@ -38,6 +42,7 @@ function App() {
   const getPokemon = (e: string) => {
     setQuery(e);
     setFound([]);
+    setActiveAbility({});
 
     //search pokedex for names that includes substring
     if (e.length > 2) {
@@ -105,7 +110,7 @@ function App() {
     );
 
     //multiply multi for dual types
-    type.forEach((type) => {
+    type.map((type) => {
       const tempMulti: multiType = JSON.parse(
         JSON.stringify(typechart.find((item) => item.type === type)?.multi)
       );
@@ -131,13 +136,26 @@ function App() {
     return [weak, strong, immune];
   };
 
-  const handleAbilityHover = (name: string | null, ability: string | null) => {
-    setHoverPokemon(name || null);
-    setHoverAbility(ability || null);
+  const checkAbilityMulti = (name: string, ability: string[]) => {
+    //check if abilitymulti is needed, select first case
+    let temp = false;
+    ability.forEach((ability) => {
+      if (abilitymulti.some((item2) => ability === item2.ability)) {
+        if (!(name in activeAbility) && !temp) {
+          setActiveAbility((prev) => ({ ...prev, [name]: ability }));
+          temp = !temp;
+        }
+      }
+    });
   };
 
   const handleAbilityClick = (name: string, ability: string) => {
-    console.log(name, ability);
+    setActiveAbility((prev) => ({ ...prev, [name]: ability }));
+  };
+
+  const handleAbilityHover = (name: string | null, ability: string | null) => {
+    setHoverPokemon(name || null);
+    setHoverAbility(ability || null);
   };
 
   const renderNavbar = () => {
@@ -175,6 +193,8 @@ function App() {
   };
 
   const renderPoke = (found: pokedexType) => {
+    checkAbilityMulti(found.name, found.ability);
+
     return (
       <div className="card-body">
         <div className="row">
@@ -190,23 +210,31 @@ function App() {
               }`}
             />
           </div>
-          <div className="col name">{found.name}</div>
+          <div
+            className="col name"
+            onClick={() => {
+              console.log(activeAbility);
+            }}
+          >
+            {found.name}
+          </div>
           <div className="col">
             {found.ability.map((ability, index, array) => {
               //check if is hidden ability, > 1 & last
               const isHA = index > 0 && index === array.length - 1;
+              const isSelected = activeAbility[found.name] === ability;
 
               return (
                 <div
-                  className="ability sub"
+                  className={`ability sub ${isSelected ? "selected" : ""}`}
+                  onClick={() => {
+                    handleAbilityClick(found.name, ability);
+                  }}
                   onMouseEnter={() => {
                     handleAbilityHover(found.name, ability);
                   }}
                   onMouseLeave={() => {
                     handleAbilityHover(null, null);
-                  }}
-                  onClick={() => {
-                    handleAbilityClick(found.name, ability);
                   }}
                 >
                   {isHA ? `HA: ${ability}` : ability}
